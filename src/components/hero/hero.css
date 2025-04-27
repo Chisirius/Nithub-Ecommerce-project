@@ -1,0 +1,349 @@
+* {
+  margin: 0px;
+}
+
+.page1 {
+  display: flex;
+  height: 100vh;
+  padding: 30px;
+  background-color: rgba(11, 153, 11, 0.736);
+}
+
+.a {
+  border: orange 2px solid;
+  margin: auto 20px;
+  height: fit-content;
+  padding: 20px 0;
+}
+
+.a h1 {
+  text-align: center;
+  font-style: bold;
+  margin-bottom: 50px;
+}
+
+.a p {
+  text-align: center;
+  font-style: bold;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 13px;
+}
+
+.b {
+  display: flex;
+}
+
+.phone {
+  border: solid 3px skyblue;
+  border-radius: 15px;
+  margin: auto;
+  height: 550px;
+  width: fit-content;
+  background-color: white;
+}
+
+.phone1,
+.phone2,
+.phone3 {
+  border: solid 8px black;
+  border-radius: 12px;
+  width: 320px;
+  height: 550px;
+  padding: 0 10px;
+}
+
+.phonee {
+  margin-left: -55px;
+}
+
+.design {
+  border: 2px solid black;
+  padding: 7px 50px 7px;
+  background-color: black;
+  border-end-end-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 0 5px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.icons {
+  padding-top: 2px;
+}
+
+.phone2 .icons {
+  padding-right: 30px;
+}
+
+/* Main container */
+.search-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  gap: 10px;
+}
+
+/* Search box (input + icon) */
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  background: #fff;
+}
+
+.search-input {
+  border: none;
+  padding: 7px;
+  padding-left: 15px;
+  font-size: 14px;
+  border-radius: 25px;
+  color: #777;
+}
+
+/* Search icon inside input */
+.search-icon {
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.search-button {
+  background: green;
+  color: #fff;
+  border: none;
+  height: fit-content;
+  width: 35px;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 19px;
+  margin-top: 5px;
+
+  cursor: pointer;
+}
+
+/* Optional: Hover effect for the button */
+.search-button:hover {
+  background: #0056b3;
+}
+.category {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category span {
+  font-size: 12px;
+}
+.images {
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.images img {
+  border: 1px solid green;
+  border-radius: 15px;
+  width: 70px;
+  height: 70px;
+}
+
+.recommended {
+  margin: 5px 0;
+}
+
+.recommend {
+  margin: 5px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.item {
+  width: fit-content;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(200, 198, 198);
+}
+.item img {
+  width: 125px;
+  height: 65px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.phone p {
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  margin-top: 22px;
+  text-align: center;
+}
+
+.phone2 header {
+  margin: 0 10px;
+  position: absolute;
+  width: 285px;
+}
+
+.mages-slide {
+  margin: 0;
+  padding: 0;
+  width: 305px;
+  height: 220px;
+  border-radius: 5px;
+}
+
+.phone2 {
+  padding: 0;
+}
+
+.product-desc {
+  padding: 0 10px;
+}
+
+.product-desc p {
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 5px auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: left;
+}
+
+.product-desc span {
+  font-size: 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.sellers-img {
+  border-radius: 50%;
+  width: 28%;
+  height: 28%;
+}
+
+.seller {
+  display: flex;
+  margin: 0 10px;
+}
+
+.seller-profile {
+  margin: 5px 10px 10px;
+}
+
+.order {
+  margin: 10px;
+  width: 250px;
+  height: 35px;
+  color: white;
+  background-color: rgb(48, 158, 48);
+  border: none;
+  border-radius: 5px;
+}
+
+.footer {
+  margin: 10px;
+}
+
+.items {
+  display: flex;
+  box-shadow: 5px 5px 5px 5px rgb(200, 198, 198);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+}
+
+.cart-desc {
+  line-height: 20px;
+}
+
+.cart-desc button {
+  width: 100px;
+  height: 25px;
+  color: white;
+  background-color: rgb(48, 158, 48);
+  border: none;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.cart-img {
+  border: green 2px solid;
+  width: 135px;
+  height: 95px;
+  border-radius: 10%;
+  margin: 0 20px 0 10px;
+}
+
+/* page2 */
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(180deg, #1bda58, #e1ffea22 60%);
+  display: flex;
+  padding: 50px;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 180px;
+  line-height: 1.1;
+}
+
+.hero-left h2 {
+  color: #090909;
+  font-size: 26px;
+  font-weight: 600px;
+}
+
+.hero-left p {
+  color: #171717;
+  font-size: 80px;
+  font-weight: 700px;
+}
+
+.hand-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hand-hand-icon img {
+  width: 105px;
+}
+
+.hero-latest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 310px;
+  height: 70px;
+  border-radius: 75px;
+  margin-top: 30px;
+  background: rgb(31, 190, 31);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-right img {
+  width: 450px;
+  margin-bottom: 80px;
+}
