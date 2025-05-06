@@ -5,7 +5,7 @@ import New__collections from "../assets/newcollection";
 function Newcollections() {
   return (
     <div className="newcollections">
-      <h1>NEW COLLECTIONS</h1>
+      <h1>Featured Products</h1>
       <hr />
       <div className="collections">
         {New__collections.map((New__collection, i) => {

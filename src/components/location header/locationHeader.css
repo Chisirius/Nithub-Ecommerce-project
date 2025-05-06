@@ -1,0 +1,16 @@
+.locationHeader {
+  border: 2px solid black;
+  background-color: black;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.712);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 100;
+}
+
+.locationHeader select {
+  border: none;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.712);
+  margin-left: 10px;
+}

@@ -38,7 +38,7 @@
   border: solid 3px skyblue;
   border-radius: 15px;
   margin: auto;
-  height: 550px;
+  height: 530px;
   width: fit-content;
   background-color: white;
 }
@@ -49,7 +49,7 @@
   border: solid 8px black;
   border-radius: 12px;
   width: 320px;
-  height: 550px;
+  height: 525px;
   padding: 0 10px;
 }
 
@@ -178,12 +178,15 @@ header {
   font-size: 12px;
 }
 
-footer {
+.footer1 {
   display: flex;
   justify-content: space-between;
-  gap: 22px;
+  gap: 42px;
   margin-top: 22px;
+  margin-left: 18px;
   text-align: center;
+  position: absolute;
+  bottom: -72px;
 }
 
 .phone2 header {

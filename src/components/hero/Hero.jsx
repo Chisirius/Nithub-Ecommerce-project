@@ -87,7 +87,7 @@ function Hero() {
                 </div>
               </div>
 
-              <footer>
+              <footer className="footer1">
                 <div>
                   <i className="fa-solid fa-house"></i>
                   <p>Home</p>
@@ -159,7 +159,7 @@ function Hero() {
                   </div>
                 </div>
                 <button className="order">order button</button>
-                <footer className="footer">
+                <footer className="footer1">
                   <div>
                     <i className="fa-solid fa-house"></i>
                     <p>Home</p>
@@ -263,7 +263,7 @@ function Hero() {
                   </div>
                 </div>
               </div>
-              <footer>
+              <footer className="footer1">
                 <div>
                   <i className="fa-solid fa-house"></i>
                   <p>Home</p>
@@ -304,7 +304,7 @@ function Hero() {
             <p>for all meal</p>
           </div>
           <div className="hero-latest-btn">
-            <div>Best sellers</div>
+            <div>Check Now</div>
           </div>
         </div>
 

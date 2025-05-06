@@ -1,0 +1,16 @@
+.filterBar {
+  display: flex;
+  background-color: grey;
+  padding: 15px;
+  justify-content: center;
+  gap: 75px;
+  font-size: 18px;
+}
+
+.filterBar select {
+  border: none;
+  background-color: grey;
+  width: 95px;
+  display: flex;
+  font-size: 18px;
+}
