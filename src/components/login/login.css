@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .fullscreen-center {
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .signup-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  
+  .fullscreen-center input,
+  .fullscreen-center select {
+    width: 100%;
+    padding: 1rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    transition: border-color 0.3s;
+  }
+  #terms {
+    width: auto;
+  }
+  
+  .signup-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 45px;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.25rem;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #2563eb;
+    outline: none;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  /* .checkbox-container input {
+    margin-right: 0.5rem;
+  }
+   */
+  .checkbox-container a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  
+  .checkbox-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .submit-btn {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }

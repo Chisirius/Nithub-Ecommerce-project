@@ -25,7 +25,7 @@ function LocationHeader() {
         </span>
       </div>
       <p>Free shipping Over $300.00</p>
-      <p>PROFILE</p>
+      <p>Help</p>
     </div>
   );
 }

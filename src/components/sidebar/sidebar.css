@@ -1,0 +1,32 @@
+aside {
+   min-width: 220px;
+    padding: 2%;
+    margin-right: 50px;
+    box-shadow: 5px 5px 5px 3px rgb(234, 228, 228);
+  }
+  
+  .category-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 40px;
+    cursor: pointer;
+    padding: 5px;
+    gap: 30px;
+  }
+  
+  .category-item:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  .category-item.active{
+    background-color: #538741;
+    border-radius: 5px;
+    color:white;
+  }
+
+ aside h1 {
+    padding: 0;
+    margin-bottom: 15px;
+
+  }

@@ -1,4 +1,6 @@
 import "./navbar.css";
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
     <header className="head">
@@ -18,21 +20,33 @@ function Navbar() {
         <button className="search-buttonn">+</button>
       </div>
       <div className="utilities">
+       
         <div className="account">
-          <i className="fa-regular fa-user fa-lg"></i>
-          <h4>Account</h4>
-          <i className="fa-solid fa-angle-down fa-2xs"></i>
+       <NavLink
+          to="/signup"
+          className={({ isActive }) =>
+          isActive ? "signup-button active" : "signup-button"
+       }>
+           <h4> <i className="fa-regular fa-user fa-lg"></i> Sign up </h4>
+        </NavLink>
         </div>
+
         <div className="account">
           <i className="fa-regular fa-circle-question fa-lg"></i>
-          <h4>Help</h4>
+          <h4>Profile</h4>
           <i className="fa-solid fa-angle-down fa-2xs"></i>
         </div>
+        
         <div className="account">
-          <i className="fa-solid fa-cart-shopping fa-lg"></i>
-          <h4>Cart</h4>
-          <i className="fa-solid fa-angle-down fa-2xs"></i>
+       <NavLink
+          to="/Cart"
+          className={({ isActive }) =>
+          isActive ? "signup-button active" : "signup-button"
+       }>
+           <h4> <i className="fa-solid fa-cart-shopping fa-lg" /> Cart </h4>
+        </NavLink>
         </div>
+        
       </div>
     </header>
   );

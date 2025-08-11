@@ -70,3 +70,24 @@
   gap: 30px;
   margin-right: 40px;
 }
+
+.signup-button{
+  text-decoration: none;
+  color: black;
+}
+
+.signup-button:hover {
+  background-color: #536e4f90;      /* Slightly darker blue */
+  transform: translateY(-1px);    /* Subtle lift on hover */
+}
+
+.signup-button:active {
+   /* Consistent dark blue tone */
+  transform: scale(0.98);    /* Slight "press" effect */
+  text-decoration: none;     /* Keep it clean – optional */
+}
+
+.signup-button.active {
+  background-color: #536e4f90;
+  /* box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3); glow */
+}
