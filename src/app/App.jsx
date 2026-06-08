@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 
 
 import Shop from "../pages/Shop";
-import Footer from "../components/Footer/Footer";
 import LocationHeader from "../components/locationHeader/LocationHeader";
 import React, { useContext } from "react";
 import Navbar from "../components/AppHeader/AppHeader";
@@ -24,6 +23,7 @@ import Wishlist from "../pages/Wishlist/Wishlist";
 import AddressBookPage from "../pages/AddressBook/AddressBook";
 import NewsletterPreferencesPage from "../components/profile/newsLetter/NewsLetter";
 import OrdersPage from "../pages/orders/OrderPage";
+import Footer from "../components/FooterHelp./FooterHelp";
 
 
 
@@ -48,9 +48,10 @@ function App() {
         <LocationHeader />
       <SearchProvider>
         <Navbar />
-        <Toast /> 
+        
        
         <FilterBar/>
+        <Toast /> 
         
         <Routes>
         <Route path="/" element={<Shop />} />
@@ -90,8 +91,9 @@ function App() {
           
           
         </Routes>
+        <Footer />
         </SearchProvider>
-      <Footer />
+      
     </>
   );
 }
