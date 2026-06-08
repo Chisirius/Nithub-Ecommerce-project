@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-logo">
-        <img src="/farm logo.jpeg" alt="footer logo" />
+        <img src="/farmlogo.jpeg" alt="footer logo" />
         <p>AgroMak</p>
       </div>
       <ul className="footer-links">
@@ -18,13 +18,13 @@ function Footer() {
 
       <div className="footer-social-icon">
         <div className="footer-icons-container">
-          <img src="/igicon.jpeg" alt="" />
+          <img src="/igicon.jpeg" alt="IG" />
         </div>
         <div className="footer-icons-container">
-          <img src="/whatsicon.jpeg" alt="" />
+          <img src="/whatsicon.jpeg" alt="WHATSAPP" />
         </div>
         <div className="footer-icons-container">
-          <img src="/pinticon.png" alt="" />
+          <img src="/pinticon.png" alt="PHONE" />
         </div>
       </div>
       <div className="footer-copyright">
