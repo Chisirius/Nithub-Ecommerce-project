@@ -63,12 +63,17 @@ function AccountOverview() {
           <div className="address-display">
           {defaultAddress ? (
   <>
+
+<div className="address-header">
+              <MapPin size={20} />
+              <h3 className="address-name">{defaultAddress.firstName} {defaultAddress.lastName}</h3>
+            </div>
     <p className="address-line">
       {defaultAddress.street}
     </p>
 
     <p className="address-line">
-      {defaultAddress.city}, {defaultAddress.region}
+      {defaultAddress.town}, {defaultAddress.state}
     </p>
 
     <p className="address-phone">
@@ -82,12 +87,12 @@ function AccountOverview() {
         </div>
       </div>
 
-      {/* MyAgro Store Credit Section */}
+      {/* My AgroMak Store Credit Section */}
       <div className="overview-section credit-section">
         <div className="section-header">
           <div className="section-title-wrapper">
             <CreditCard size={20} className="section-icon" />
-            <h2 className="section-title">MyAgro Store Credit</h2>
+            <h2 className="section-title">My AgroMak Store Credit</h2>
           </div>
         </div>
         <div className="section-content">

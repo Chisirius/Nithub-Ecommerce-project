@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Heart, ShoppingCart } from 'lucide-react';
 import './Wishlist.css';
-import { CartContext } from '../../../features/cart/CartContext';
+import { CartContext } from '../../../hooks/CartContext';
 import { WishlistContext } from '../../../hooks/wishlistContext';
 
 function WishlistPage() {
@@ -49,8 +49,8 @@ function WishlistPage() {
               <p className="product-category">{item.product.category}</p>
 
               <div className="product-pricing">
-                <span className="current-price">${item.product.price.toFixed(2)}</span>
-                <span className="old-price">${item.product.oldPrice.toFixed(2)}</span>
+                <span className="current-price">₦{item.product.price.toFixed(2)}</span>
+                <span className="old-price">₦{item.product.oldPrice.toFixed(2)}</span>
               </div>
 
               <button className="add-to-cart-btn"

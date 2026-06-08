@@ -37,9 +37,6 @@ function ProfileSidebar({ activePage, onPageChange }) {
     try {
   
       await becomeSeller();
-  
-      alert("Seller account activated");
-  
       navigate("/seller");
   
     } catch (error) {
