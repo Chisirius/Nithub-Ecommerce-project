@@ -58,7 +58,7 @@ export function ProductPreview() {
         </p>
         <p>
           <span className="label">Price</span>
-          <span className="value text-green-600" style={{ color: "#16a34a" }}>$7 / kg</span>
+          <span className="value text-green-600" style={{ color: "#16a34a" }}>₦7 / kg</span>
         </p>
       </div>
     </>

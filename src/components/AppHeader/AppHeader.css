@@ -307,7 +307,7 @@
   }
 
   .search-bar {
-    display: none;
+    max-width: 150px;
   }
 
   .nav-link span {

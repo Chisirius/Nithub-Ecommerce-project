@@ -59,10 +59,10 @@
 import { Star } from "lucide-react";
 
 const products = [
-  { id: 1, emoji: "🥬", name: "Spinach", price: "$3" },
-  { id: 2, emoji: "🍅", name: "Tomatoes", price: "$7" },
-  { id: 3, emoji: "🌽", name: "Corn", price: "$2" },
-  { id: 4, emoji: "🌾", name: "Rice", price: "$6" },
+  { id: 1, emoji: "🥬", name: "Spinach", price: "₦3" },
+  { id: 2, emoji: "🍅", name: "Tomatoes", price: "₦7" },
+  { id: 3, emoji: "🌽", name: "Corn", price: "₦2" },
+  { id: 4, emoji: "🌾", name: "Rice", price: "₦6" },
 ];
 
 export function ProductCard() {

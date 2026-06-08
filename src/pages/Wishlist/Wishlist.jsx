@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { WishlistContext } from "../../hooks/wishlistContext";
 import "./Wishlist.css"
-import { CartContext } from "../../features/cart/CartContext";
+import { CartContext } from "../../hooks/CartContext";
+import { ShoppingCart, Trash2 } from "lucide-react";
 
 function Wishlist() {
   const { addToCart } = useContext(CartContext);
@@ -35,24 +36,24 @@ function Wishlist() {
                 {/* PRODUCT IMAGE */}
                 <img
                   src={item.product.images?.[0]}
-                  alt="agric product"
+                  alt={item.product.name}
                   className="cart-img"
                 />
 
                 {/* PRODUCT DETAILS */}
                 <div className="item-details">
                   <h3>{item.product.name}</h3>
-                  <p>#{item.product.price}</p>
+                  <p>₦{item.product.price}</p>
                 </div>
 
                 {/* ADD TO cart */}
                 <button
-                  className="remove-btn"
+                  className="add-cart"
                   onClick={() =>
                     addToCart(item.product)
                   }
                 >
-                  Add to cart
+                  <ShoppingCart size={18} />
                 </button>
 
                 {/* REMOVE FROM WISHLIST */}
@@ -63,7 +64,7 @@ function Wishlist() {
                     removeWish(item.id);
                   }}
                 >
-                  Remove
+                  <Trash2 size={18} />
                 </button>
 
               </div>

@@ -1,6 +1,6 @@
 import './productDesc.css'
 import { useLocation} from 'react-router-dom'
-import { CartContext } from '../../features/cart/CartContext';
+import { CartContext } from '../../hooks/CartContext';
 import { useContext, useState } from 'react';
 import { useAuth } from '../../hooks/AuthContext'
 

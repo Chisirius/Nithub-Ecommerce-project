@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import './allProduct.css'
 import React from 'react'
 import { useContext } from 'react'
-import { CartContext } from '../cart/CartContext'
+import { CartContext } from '../../hooks/CartContext'
 import { ShoppingCart, Heart } from 'lucide-react';
 import { useWishlist } from '../../hooks/useWishlist'
 import { useAuth } from '../../hooks/AuthContext'
@@ -96,11 +96,11 @@ function AllProduct({
             <div className="product-price">
 
               <p className="product-price-new">
-                {Number(new_price || 0).toFixed(2)}
+              ₦{Number(new_price || 0)}
               </p>
 
               <p className="product-price-old">
-                {Number(old_price || 0).toFixed(2)}
+              ₦{Number(old_price || 0)}
               </p>
 
             </div>

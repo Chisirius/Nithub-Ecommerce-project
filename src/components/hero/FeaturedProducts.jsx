@@ -101,7 +101,7 @@ export function FeaturedProducts(){
 
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className="text-green-600">${product.price}</span>
+                      <span className="text-green-600">₦{product.price}</span>
                       <span className="text-gray-400 text-sm">/{product.unit}</span>
                     </div>
 

@@ -22,7 +22,7 @@ import { Bell, ShoppingCart } from "lucide-react";
 export function PhoneHeader() {
   return (
     <header className="phone-header">
-      <div className="phone-header-logo">🌿 FarmFresh</div>
+      <div className="phone-header-logo">🌿 AgroMak</div>
       <div className="phone-header-icons">
         <div className="relative">
           <Bell size={12} />

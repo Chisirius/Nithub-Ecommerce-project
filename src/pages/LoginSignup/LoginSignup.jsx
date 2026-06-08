@@ -37,54 +37,60 @@ function LoginSignup() {
         <h2>Signup</h2>
 
         <form  onSubmit={handleSubmit}>
-          <div>
+        
+          <div className ="select">
             <label htmlFor="name">Full Name</label>
-            <input 
+            <input
             type="text" 
             id="name" 
             name="name" 
             onChange={(e)=> setName(e.target.value)}
-            required />
+            required
+            className ="select" />
           </div>
-          <div>
+          <div className ="select">
             <label htmlFor="email">Email</label>
             <input 
             type="email" 
             id="email" 
             name="email" 
             onChange={(e)=> setEmail(e.target.value)}
-            required />
+            required 
+            className ="select"/>
           </div>
 
-          <div>
+          <div> 
             <label htmlFor="password">Password</label>
             <input 
             type="password" 
             id="password" 
             name="password"
             onChange = {(e) => setPassword(e.target.value)} 
-            required />
+            required
+            className ="select" />
           </div>
-          <div>
+
+          <div >
             <label htmlFor="confirm_password">Confirm Password</label>
             <input
               type="password"
               id="confirm_password"
               name="confirm_password"
               required
+              className ="select"
             />
           </div>
-          <div className="checkbox-container">
-            <input type="checkbox" id="terms" name="terms" required />
+          <div className="checkbox">
+            <input type="checkbox" id="terms" name="terms" required className='checker'/>
             <label htmlFor="terms"> I agree to the <a href="#">Terms & Conditions</a></label>
           </div>
           <button 
-          type="submit" 
-          className="submit-btn"
-          >Sign Up</button>
+          className='submit'
+          type="submit" >Sign Up</button>
         </form>
-        <div className="login-link">
-          Already have an account? <NavLink to='/login'>
+
+        <div className="login-here">
+          Already have an account? <NavLink to='/login' className="login">
            Login here
           </NavLink>
         </div>
@@ -95,3 +101,57 @@ function LoginSignup() {
 }
 
 export default LoginSignup
+
+
+{/* <div className="table-actions">
+                      
+                      <button className="action-btn delete">
+                        <Trash2 size={32} />
+                      </button>
+                      <button className="action-btn more">
+                        <MoreVertical size={16} />
+                      </button> */}
+
+                      // .action-btn {
+                      //   width: 36px;
+                      //   height: 36px;
+                      //   display: flex;
+                      //   align-items: center;
+                      //   justify-content: center;
+                      //   border: 1px solid #e5e7eb;
+                      //   background: white;
+                      //   border-radius: 8px;
+                      //   cursor: pointer;
+                      //   transition: all 0.2s ease;
+                      // }
+                      
+                      // .action-btn.edit {
+                      //   color: black;
+                      //   background:  #2E7D32;
+                        
+                      // }
+                      
+                      // .action-btn.edit:hover {
+                      //   background: #f0f9f4;
+                      //   border-color: #2E7D32;
+                        
+                      // }
+                      
+                      // .action-btn.delete {
+                      //   color: black;
+                      //   background: #ef4444;
+                      // }
+                      
+                      // .action-btn.delete:hover {
+                      //   background: #fef2f2;
+                      //   border-color: #ef4444;
+                      // }
+                      
+                      // .action-btn.more {
+                      //   color: #6b7280;
+                      // }
+                      
+                      // .action-btn.more:hover {
+                      //   background: #f3f4f6;
+                      //   border-color: #6b7280;
+                      // }

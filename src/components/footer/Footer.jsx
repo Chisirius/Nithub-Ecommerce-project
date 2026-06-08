@@ -6,7 +6,7 @@ function Footer() {
     <div className="footer">
       <div className="footer-logo">
         <img src="/farm logo.jpeg" alt="footer logo" />
-        <p>SPAGRO</p>
+        <p>AgroMak</p>
       </div>
       <ul className="footer-links">
         <li>Company</li>

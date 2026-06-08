@@ -79,12 +79,39 @@
   }
   
   .remove-btn {
-    background: none;
+     width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f2f2;
+    border-radius: 8px;
+    color: red;
     border: none;
-    color: #ef4444;
-    cursor: pointer;
-    font-size: 0.9rem;
   }
+
+  .add-cart{
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7faf7;
+    border-radius: 8px;
+    color: green;
+  }
+
+  .add-cart:hover{
+    background-color: #61bb66;
+    color: rgb(12, 12, 12);
+    border: none;
+  }
+
+  .remove-btn:hover{
+    border: none;
+    background-color: rgb(235, 140, 140);
+  }
+  
   
   .cart-total {
     margin-top: 2rem;
@@ -100,7 +127,7 @@
   }
   
   .checkout-btn {
-    background-color: #2563eb;
+    background-color: #2E7D32;
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -113,11 +140,11 @@
   }
   
   .checkout-btn:hover {
-    background-color: #1d4ed8;
+    background-color: #2E7D32;
   }
   
   option{
-    background-color: red;
+    background-color: #2E7D32;
     height : 35Px;
   }
 

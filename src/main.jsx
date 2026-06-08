@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './app/App.jsx'
-import { CartProvider } from "./features/cart/CartContext.jsx";
+import { CartProvider } from "./hooks/CartContext.jsx";
 import { BrowserRouter } from 'react-router-dom';
 import "./app/index.css"
 import AuthProvider from './hooks/AuthContext.jsx';

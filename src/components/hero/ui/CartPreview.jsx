@@ -60,9 +60,9 @@
 import { Trash2 } from "lucide-react";
 
 const cartItems = [
-  { id: 1, emoji: "🍅", name: "Derica Tomato", quantity: "1 kg", price: "$7.00" },
-  { id: 2, emoji: "🥔", name: "Irish Potato", quantity: "7 kg", price: "$15.00" },
-  { id: 3, emoji: "🌾", name: "Basmati Rice", quantity: "25 kg", price: "$35.00" },
+  { id: 1, emoji: "🍅", name: "Derica Tomato", quantity: "1 kg", price: "₦7.00" },
+  { id: 2, emoji: "🥔", name: "Irish Potato", quantity: "7 kg", price: "₦15.00" },
+  { id: 3, emoji: "🌾", name: "Basmati Rice", quantity: "25 kg", price: "₦35.00" },
 ];
 
 export function CartPreview() {
@@ -93,7 +93,7 @@ export function CartPreview() {
       <div className="cart-total">
         <div className="flex justify-between items-center mb-2">
           <span style={{ fontSize: 8 }} className="text-gray-500">Total</span>
-          <span style={{ fontSize: 11, fontWeight: 700 }} className="text-green-700">$57.00</span>
+          <span style={{ fontSize: 11, fontWeight: 700 }} className="text-green-700">₦57.00</span>
         </div>
         <button
           className="w-full bg-green-600 text-white rounded-xl flex items-center justify-center gap-1"

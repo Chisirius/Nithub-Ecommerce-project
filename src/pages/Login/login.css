@@ -45,7 +45,6 @@
   }
   #terms {
     width: auto;
-    
   }
   
   .signup-container {
@@ -65,9 +64,9 @@
     margin-bottom: 0.25rem;
   }
   
-  
-  .select:focus {
-    border-color:  #2E7D32;
+  input:focus,
+  select:focus {
+    border-color: #2E7D32;
     outline: none;
   }
   
@@ -75,26 +74,23 @@
     display: flex;
     align-items: center;
     font-size: 14px;
-    padding-right:5px ;
   }
   
-  .checkbox input {
+  /* .checkbox-container input {
     margin-right: 0.5rem;
-    
   }
-   
-  .checkbox a {
+   */
+  .checkbox-container a {
     color: #2E7D32;
     text-decoration: none;
   }
   
-  .checkbox a:hover {
+  .checkbox-container a:hover {
     text-decoration: underline;
   }
   
-  
-  .submit {
-    background-color:  #1b5e20;
+  .submit-btn {
+    background-color: #1b5e20;;
     color: #fff;
     padding: 0.75rem;
     border: none;
@@ -104,23 +100,22 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
-      
   
-  .submit:hover {
-    background-color: #2E7D32;
+  .submit-btn:hover {
+    background-color: #1b5e20;;
   }
   
-  .login-here {
+  .login-link {
     text-align: center;
     margin-top: 1rem;
     font-size: 14px;
   }
   
-  .login {
+  .login-link a {
     color: #2E7D32;
     text-decoration: none;
   }
   
-  .login:hover {
+  .login-link a:hover {
     text-decoration: underline;
   }

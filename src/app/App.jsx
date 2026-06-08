@@ -13,16 +13,17 @@ import LoginSignup from "../pages/LoginSignup/LoginSignup";
 import FilterBar from "../components/Navbar/NavBar";
 import Explore from "../pages/Explore/Explore";
 import Cart from "../pages/Cart/Cart";
-import Checkout from "../features/cart/Checkout";
-import Login from "../features/auth/Login";
+import Checkout from "../pages/Checkout/Checkout";
+import Login from "../pages/Login/Login";
 import ProductDesc from "../pages/productDesc/ProductDesc";
-import { CartContext } from "../features/cart/CartContext";
-import SellerDashboard from "../components/Seller/SellerDashboard";
+import { CartContext } from "../hooks/CartContext";
+import SellerDashboard from "../pages/SellerDashboard";
 import ProfileDashboard from "../pages/profileDashboard";
 import ProtectedRoute from "../routes/protectedRoutes";
 import Wishlist from "../pages/Wishlist/Wishlist";
-import AddressBookPage from "../components/profile/settings/addressBook";
+import AddressBookPage from "../pages/AddressBook/AddressBook";
 import NewsletterPreferencesPage from "../components/profile/newsLetter/NewsLetter";
+import OrdersPage from "../pages/orders/OrderPage";
 
 
 
@@ -69,19 +70,24 @@ function App() {
         } />
 
 
-
-          <Route path='/checkout' element={<Checkout />} />
+          
+          <Route path='/checkout' element={
+          <ProtectedRoute><Checkout /></ProtectedRoute>} />
+          
           {/* 
           <Route path="/blog" element={<blog category="blog" />} />
            */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<LoginSignup />} />
+          <Route path="/login" element={<ProtectedRoute><Login /></ProtectedRoute>} />
+          <Route path="/signup" element={<ProtectedRoute><LoginSignup /></ProtectedRoute>} />
           <Route path='/productDesc/:id' element={<ProductDesc />} />
-          <Route path='/profile' element={<ProfileDashboard />} />
-          <Route path='/seller' element={<SellerDashboard />} />
-          <Route path='/addressBook' element={<AddressBookPage />} />
+          
+          
+          <Route path='/profile' element={<ProtectedRoute><ProfileDashboard /></ProtectedRoute>} />
+          <Route path='/seller' element={<ProtectedRoute><SellerDashboard /></ProtectedRoute>} />
+          <Route path='/addressBook' element={<ProtectedRoute><AddressBookPage /></ProtectedRoute>} />
           <Route path='/newsletter' element={<NewsletterPreferencesPage />} />
-
+          <Route path='/order' element={<ProtectedRoute><OrdersPage /></ProtectedRoute>} />
+          
           
         </Routes>
         </SearchProvider>

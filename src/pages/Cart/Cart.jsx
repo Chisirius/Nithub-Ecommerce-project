@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom'
 import './cart.css'
 import { useContext } from 'react'
-import { CartContext } from '../../features/cart/CartContext'
+import { CartContext } from '../../hooks/CartContext'
+import { Trash2 } from 'lucide-react'
 
 function Cart() {
   const {
@@ -43,7 +44,7 @@ function Cart() {
           {/* PRODUCT IMAGE */}
             <img
               src={item.product.images?.[0]}
-              alt="agric product"
+              alt={item.product.name}
               className="cart-img"
             />
 
@@ -106,12 +107,11 @@ function Cart() {
               ₦{getItemSubtotal(item)}
             </div>
 
-            <button
-              className="remove-btn"
-              onClick={() => removeFromCart(item.id)}
-            >
-              Remove
-            </button>
+            <button 
+            className="action-btn del"
+            nClick={() => removeFromCart(item.id)}>
+                        <Trash2 />
+                      </button>
 
           </div>
 
@@ -122,7 +122,7 @@ function Cart() {
         <h2>Total: ₦{subTotal}</h2>
 
         <NavLink to='/checkout'>
-          <button className="checkout-btn">
+          <button className="checkout">
             Proceed to Checkout
           </button>
         </NavLink>

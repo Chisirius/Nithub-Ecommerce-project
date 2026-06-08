@@ -1,10 +1,10 @@
 import "./AppHeader.css";
 import { NavLink, useNavigate, useLocation  } from "react-router-dom";
 import { useContext, useState } from 'react'
-import { CartContext } from '../../features/cart/CartContext'
+import { CartContext } from '../../hooks/CartContext'
 import { SearchContext } from "../../hooks/search/SearchContext";
 import { useAuth } from "../../hooks/AuthContext"
-import { Search, Bell, MessageSquare, ChevronDown, ShoppingCart, User } from "lucide-react";
+import { Search, ChevronDown, ShoppingCart, User, Wand2 } from "lucide-react";
 import { useWishlist } from "../../hooks/useWishlist";
 
 
@@ -16,8 +16,8 @@ function Navbar() {
   const{searchQuery, setSearchQuery} = useContext(SearchContext)
   const { user,logout, authLoading} = useAuth();
   const [showDropdown, setShowDropdown] = useState(false);
-  const [notifications, setNotification] = useState(3);
-  const [messages, setMessages] = useState(5);
+  // const [notifications, setNotification] = useState(3);
+  // const [messages, setMessages] = useState(5);
   
 
   const navigate = useNavigate();
@@ -42,7 +42,15 @@ function Navbar() {
     // Only navigate if not already on explore
     if (location.pathname !== "/explore") {
       navigate("/explore");
+      
     }
+  }
+
+  function handleLogout (e){
+    e.preventDefault()
+    logout()
+    navigate("/Home")
+
   }
 
   if (authLoading) {
@@ -54,10 +62,10 @@ function Navbar() {
       <div className="header-left">
 
         <div className="logo-section">
-          <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-              <span className="text-white">🌾</span>
+          <div className="w-10 h-10 bg-green-200 rounded-lg flex items-center justify-center">
+              <span className="text-white">🌿</span>
           </div>
-          <span className="logo-text">AgroMarket</span>
+          <span className="logo-text">AgroMak</span>
         </div>
 
         <div className="search-bar">
@@ -116,7 +124,7 @@ function Navbar() {
                 isActive ? "nav-link cart-link active" : "nav-link cart-link"
               }
             >
-              <ShoppingCart size={20} />
+              <Wand2 size={20} />
               <span>Wish</span>
               {wishlist.length > 0 && <span className="cart-badge">{wishlist.length}</span>}
             </NavLink>
@@ -127,7 +135,7 @@ function Navbar() {
                 onClick={() => setShowDropdown(!showDropdown)}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+                  src="https://images.unsplash.com/photo-1740252117044-2af197eea287?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="User"
                   className="avatar-image"
                 />
@@ -147,7 +155,7 @@ function Navbar() {
                   <button className="dropdown-item">Settings</button>
                   <button className="dropdown-item">Help Center</button>
                   <div className="dropdown-divider"></div>
-                  <button className="dropdown-item logout" onClick={logout}>
+                  <button className="dropdown-item logout" onClick={handleLogout}>
                     Logout
                   </button>
                 </div>

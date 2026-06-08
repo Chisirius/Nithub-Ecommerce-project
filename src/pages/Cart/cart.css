@@ -99,7 +99,7 @@
     color: #111827;
   }
   
-  .checkout-btn{
+  .checkout{
     background-color: #388E3C;
     color: white;
     padding: 0.75rem 1.5rem;
@@ -120,3 +120,14 @@
     background-color: red;
     height : 35Px;
   }
+  
+  .action-btn.del {
+    width: 46px;
+      color: black;
+      font-size: 25px;
+      background: #e4dede;
+     }
+
+     .action-btn.del:hover {
+        background: #d69c9c;
+       }

@@ -24,7 +24,7 @@ function LocationHeader() {
           </select>
         </span>
       </div>
-      <p>Free shipping Over $300.00</p>
+      <p>Free shipping Over ₦50,000.00</p>
       <p>Help</p>
     </div>
   );
