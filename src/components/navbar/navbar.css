@@ -1,93 +1,39 @@
-.head {
-  background-color: rgba(153, 206, 153, 0.736);
+.filterBar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: grey;
+  padding: 15px;
+  justify-content: center;
+  gap: 75px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+
 }
 
-.search-container {
-  display: flex;
-  justify-content: space-around;
-  margin: 15px;
-  gap: 10px;
-}
-
-/* Search box (input + icon) */
-.search-boxx {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 500px;
-  height: 50px;
-  border: 2px solid #ccc;
-  border-radius: 25px;
-  background: #fff;
-}
-
-.search-input {
+.filterBar select {
   border: none;
-  padding: 7px;
-  padding-left: 15px;
-  font-size: 14px;
-  border-radius: 25px;
-  color: #777;
-}
-
-/* Search icon inside input */
-.search-icon {
-  position: absolute;
-  right: 10px;
-  font-size: 14px;
-  color: #777;
-}
-
-.search-buttonn {
-  background: green;
-  color: #fff;
-  border: none;
-  height: 50px;
-  width: 50px;
-  padding: 5px;
-  border-radius: 50%;
-  font-size: 19px;
-  cursor: pointer;
-}
-
-/* Optional: Hover effect for the button */
-.search-button:hover {
-  background: #0056b3;
-}
-
-.account {
+  background-color: grey;
+  width: 95px;
   display: flex;
-
-  align-items: center;
-  gap: 10px;
+  font-size: 18px;
 }
 
-.utilities {
-  display: flex;
-  gap: 30px;
-  margin-right: 40px;
-}
-
-.signup-button{
+.filterBar a {
   text-decoration: none;
-  color: black;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.signup-button:hover {
-  background-color: #536e4f90;      /* Slightly darker blue */
-  transform: translateY(-1px);    /* Subtle lift on hover */
+.filterBar a:hover {
+  background-color: #e0e0e0;
+  color: #000;
 }
 
-.signup-button:active {
-   /* Consistent dark blue tone */
-  transform: scale(0.98);    /* Slight "press" effect */
-  text-decoration: none;     /* Keep it clean – optional */
+.filterBar a.active {
+  background-color: #4CAF50;
+  color: white;
 }
 
-.signup-button.active {
-  background-color: #536e4f90;
-  /* box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3); glow */
-}

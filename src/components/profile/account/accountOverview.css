@@ -1,0 +1,206 @@
+/* === ACCOUNT OVERVIEW === */
+.account-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .overview-header {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .overview-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px 0;
+  }
+  
+  .overview-subtitle {
+    font-size: 15px;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  /* === OVERVIEW SECTIONS === */
+  .overview-section {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .section-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .section-icon {
+    color: #2E7D32;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .edit-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    color: #2E7D32;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .edit-button:hover {
+    background: #f0f9f4;
+    border-color: #2E7D32;
+  }
+  
+  .section-content {
+    padding: 24px;
+  }
+  
+  /* === INFO ROWS === */
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  .info-row:last-child {
+    border-bottom: none;
+  }
+  
+  .info-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+  
+  .info-value {
+    font-size: 15px;
+    color: #111827;
+    font-weight: 500;
+  }
+  
+  /* === ADDRESS DISPLAY === */
+  .address-display {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .address-line {
+    font-size: 15px;
+    color: #374151;
+    margin: 0;
+  }
+  
+  .address-phone {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 8px 0 0 0;
+  }
+  
+  /* === CREDIT SECTION === */
+  .credit-section {
+    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e9 100%);
+    border: 2px solid #2E7D32;
+  }
+  
+  .credit-display {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .credit-amount {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2E7D32;
+    margin-bottom: 8px;
+  }
+  
+  .credit-description {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  /* === NEWSLETTER SECTION === */
+  .newsletter-description {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+  }
+  
+  .newsletter-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+    color: #2E7D32;
+    font-weight: 600;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .newsletter-link:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .overview-header {
+      padding: 20px;
+    }
+  
+    .section-header {
+      padding: 16px 20px;
+    }
+  
+    .section-content {
+      padding: 20px;
+    }
+  
+    .info-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+  
+    .credit-amount {
+      font-size: 36px;
+    }
+  }
+  

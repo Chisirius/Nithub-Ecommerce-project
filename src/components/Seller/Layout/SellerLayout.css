@@ -1,0 +1,47 @@
+/* === SELLER LAYOUT === */
+.seller-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #F8FAF8;
+  }
+  
+  .seller-main {
+    flex: 1;
+    margin-left: 260px;
+    transition: margin-left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .seller-main.sidebar-collapsed {
+    margin-left: 80px;
+  }
+  
+  .seller-content {
+    flex: 1;
+    padding: 32px;
+    overflow-x: hidden;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 1024px) {
+    .seller-main {
+      margin-left: 80px;
+    }
+  
+    .seller-main.sidebar-collapsed {
+      margin-left: 80px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .seller-main {
+      margin-left: 0;
+    }
+  
+    .seller-content {
+      padding: 16px;
+    }
+  }
+  

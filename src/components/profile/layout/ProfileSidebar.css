@@ -1,0 +1,172 @@
+/* === PROFILE SIDEBAR === */
+.profile-sidebar {
+    width: 280px;
+    background: white;
+    border-radius: 12px;
+    padding: 24px 0;
+    border: 1px solid #e5e7eb;
+    position: sticky;
+    top: 24px;
+    height: fit-content;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+  }
+  
+  .profile-sidebar-header {
+    padding: 0 20px 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .sidebar-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+  
+  /* === NAVIGATION === */
+  .profile-sidebar-nav {
+    padding: 16px 0;
+  }
+  
+  .profile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 2px 12px;
+    width: calc(100% - 24px);
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-align: left;
+  }
+  
+  .profile-menu-item:hover {
+    background: #f3f4f6;
+    color: #2E7D32;
+  }
+  
+  .profile-menu-item.active {
+    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e9 100%);
+    color: #2E7D32;
+    font-weight: 600;
+  }
+  
+  .menu-icon {
+    flex-shrink: 0;
+  }
+  
+  .menu-label {
+    flex: 1;
+  }
+  
+  .sidebar-divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 16px 12px;
+  }
+  
+  /* === SELLER CTA CARD === */
+  .seller-cta-card {
+    margin: 16px 12px;
+    padding: 20px;
+    background: linear-gradient(135deg, #2E7D32 0%, #388E3C 100%);
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+  }
+  
+  .cta-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cta-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+  
+  .cta-description {
+    font-size: 13px;
+    margin: 0 0 16px 0;
+    opacity: 0.9;
+    line-height: 1.4;
+  }
+  
+  .cta-button {
+    width: 100%;
+    padding: 10px 20px;
+    background: white;
+    color: #2E7D32;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    background: #f9fafb;
+    transform: translateY(-1px);
+  }
+  
+  /* === SCROLLBAR === */
+  .profile-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .profile-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .profile-sidebar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+  
+  .profile-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 1024px) {
+    .profile-sidebar {
+      width: 240px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .profile-sidebar {
+      width: 100%;
+      position: relative;
+      top: 0;
+      margin-bottom: 24px;
+    }
+  
+    .seller-cta-card {
+      margin: 8px 10px;
+      padding: 10px;
+    }
+  }
+  

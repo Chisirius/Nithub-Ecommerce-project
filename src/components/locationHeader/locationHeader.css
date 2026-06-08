@@ -1,0 +1,16 @@
+.locationHeader {
+  background-color: rgb(191, 190, 190);
+  padding: 2px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.locationHeader select {
+  border: none;
+  background-color: rgb(191, 190, 190);
+  margin: 0;
+  padding-left: 25px;
+  font-weight: 200;
+}

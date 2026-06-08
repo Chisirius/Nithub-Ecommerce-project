@@ -1,0 +1,214 @@
+/* === SELLER SIDEBAR === */
+.seller-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 260px;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    z-index: 100;
+  }
+  
+  .seller-sidebar.collapsed {
+    width: 80px;
+  }
+  
+  /* === SIDEBAR HEADER === */
+  .sidebar-header {
+    padding: 24px 20px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .logo-icon {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2E7D32;
+    white-space: nowrap;
+  }
+  
+  /* === SIDEBAR NAVIGATION === */
+  .sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    overflow-y: auto;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-bottom {
+    margin-top: auto;
+  }
+  
+  .sidebar-divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 16px 12px;
+  }
+  
+  /* === SIDEBAR ITEMS === */
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    margin: 2px 12px;
+    width: calc(100% - 24px);
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-align: left;
+  }
+  
+  .seller-sidebar.collapsed .sidebar-item {
+    justify-content: center;
+    padding: 12px;
+  }
+  
+  .sidebar-item:hover {
+    background: #f3f4f6;
+    color: #2E7D32;
+  }
+  
+  .sidebar-item.active {
+    background: linear-gradient(135deg, #2E7D32 0%, #388E3C 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.25);
+  }
+  
+  .sidebar-icon {
+    flex-shrink: 0;
+  }
+  
+  .sidebar-label {
+    flex: 1;
+    white-space: nowrap;
+  }
+  
+  .sidebar-arrow {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+  
+  .seller-sidebar.collapsed .sidebar-label,
+  .seller-sidebar.collapsed .sidebar-arrow {
+    display: none;
+  }
+  
+  /* === SELLER PROFILE CARD === */
+  .seller-profile-card {
+    padding: 16px;
+    margin: 12px;
+    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e9 100%);
+    border-radius: 12px;
+    border: 1px solid #c8e6c9;
+  }
+  
+  .profile-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 12px;
+    border: 2px solid #2E7D32;
+  }
+  
+  .profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  .profile-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+  }
+  
+  .profile-email {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* === SCROLLBAR === */
+  .sidebar-nav::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .sidebar-nav::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+  
+  .sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 1024px) {
+    .seller-sidebar {
+      width: 80px;
+    }
+  
+    .sidebar-label,
+    .sidebar-arrow,
+    .seller-profile-card {
+      display: none;
+    }
+  
+    .sidebar-item {
+      justify-content: center;
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .seller-sidebar {
+      transform: translateX(-100%);
+    }
+  
+    .seller-sidebar.mobile-open {
+      transform: translateX(0);
+    }
+  }
+  

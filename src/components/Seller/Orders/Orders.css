@@ -1,0 +1,151 @@
+/* === ORDERS MANAGEMENT === */
+.orders-management {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .orders-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .export-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .export-btn:hover {
+    border-color: #2E7D32;
+    color: #2E7D32;
+  }
+  
+  /* === STATS GRID === */
+  .orders-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .order-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+  }
+  
+  .stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2E7D32;
+    margin-bottom: 4px;
+  }
+  
+  .stat-label {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  /* === CONTROLS === */
+  .orders-controls {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-tabs {
+    display: flex;
+    gap: 8px;
+    background: white;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .filter-tab {
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-tab.active {
+    background: #2E7D32;
+    color: white;
+  }
+  
+  .filter-tab:hover:not(.active) {
+    background: #f3f4f6;
+  }
+  
+  /* === ORDERS TABLE === */
+  .orders-table-container {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+  }
+  
+  .payment-badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .payment-paid {
+    background: #d1fae5;
+    color: #065f46;
+  }
+  
+  .payment-pending {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  .payment-failed {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .orders-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .orders-controls {
+      flex-direction: column;
+    }
+  
+    .filter-tabs {
+      overflow-x: auto;
+    }
+  
+    .orders-table-container {
+      overflow-x: auto;
+    }
+  
+    .orders-table {
+      min-width: 1000px;
+    }
+  }
+  

@@ -1,317 +1,92 @@
 import "./hero.css";
+import { BottomNav } from "./BottomNav";
+import { Features } from "./Features";
+import { FeaturedProducts } from "./FeaturedProducts";
+import { ComingSoon } from "./ComingSoon";
+import { CartPreview } from "./ui/CartPreview";
+import { CategoryPreview } from "./ui/CategoryPreview";
+import { ProductCard } from "./ui/ProductCard";
+import { SearchBox } from "./ui/SearchBox";
+import { PhoneHeader } from "./ui/PhoneHeader";
+import { ProductPreview } from "./ui/ProductPreview";
+import { SellerPreview } from "./ui/SellerPreview";
+import HeroIntro from "./HeroIntro";
+import LaptopDesign from "./LaptopDesign";
 
 function Hero() {
   return (
     <>
-      <div className="page1">
-        <div className="a">
-          <h1>AgrSoko</h1>
-          <p>
-            this is my first solo project. Wiyh nithub certification,
-            eninchiryurncnvc93nwoowncnwncu
-          </p>
-        </div>
+      {/* ── Hero section ── */}
+      <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 px-6 lg:px-12 py-14">
+        {/* ambient blobs */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-green-200/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-200/40 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
-        <div className="b">
-          <div className="phone">
-            <div className="phone1">
-              <header>
-                <span className="icons">
-                  <b>09.20</b>
-                </span>
-                <span className="design"></span>
-                <span className="icons">
-                  <i className="fa-solid fa-wifi"></i>
-                  <i className="fa-solid fa-signal fa-sm"></i>
-                  <i className="fa-solid fa-battery-half fa-sm"></i>
-                </span>
-              </header>
+        <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
 
-              <div className="search-container">
-                <div className="search-box">
-                  <input
-                    type="text"
-                    placeholder="Search in here"
-                    className="search-input"
-                  />
-                  <span className="search-icon">🔍</span>
-                </div>
-
-                <button className="search-button">+</button>
-              </div>
-
-              <div>
-                <div className="category">
-                  <span>Search by category</span>
-                  <span>view all</span>
-                </div>
-                <div className="images">
-                  <img src="/cereals.jpeg" alt="agric product" />
-                  <img src="/beans grain.jpeg" alt="agric product" />
-                  <img src="/vegetables.jpeg" alt="agric product" />
-                  <img src="/fruits.jpeg" alt="agric product" />
-                </div>
-              </div>
-
-              <div>
-                <p className="recommended">Recommended</p>
-              </div>
-
-              <div className="recommend">
-                <div className="item">
-                  <img src="/vegetables.jpeg" alt="product image" />
-                  <p>name</p>
-                  <p>price</p>
-                  <p>cart</p>
-                </div>
-
-                <div className="item">
-                  <img src="/tomato.jpeg" alt="product image" />
-                  <p>name</p>
-                  <p>price</p>
-                  <p>cart</p>
-                </div>
-
-                <div className="item">
-                  <img src="/maize grain.jpeg" alt="product image" />
-                  <p>name</p>
-                  <p>price</p>
-                  <p>cart</p>
-                </div>
-
-                <div className="item">
-                  <img src="/rice grain.jpeg" alt="product image" />
-                  <p>name</p>
-                  <p>price</p>
-                  <p>cart</p>
-                </div>
-              </div>
-
-              <footer className="footer1">
-                <div>
-                  <i className="fa-solid fa-house"></i>
-                  <p>Home</p>
-                </div>
-
-                <div>
-                  <i
-                    className="fa-solid fa-bag-shopping"
-                    style={{ color: "#179631" }}
-                  ></i>
-                  <p>Shop</p>
-                </div>
-
-                <div>
-                  <i className="fa-solid fa-newspaper"></i>
-                  <p>Blog</p>
-                </div>
-
-                <div>
-                  <i className="fa-solid fa-user"></i>
-                  <p>Profile</p>
-                </div>
-              </footer>
-            </div>
+          {/* left: text */}
+          <div className="flex-1 flex justify-center lg:justify-start">
+            <HeroIntro />
           </div>
 
-          <div className="phone phonee ">
-            <div className="phone2">
-              <header>
-                <span className="icons">
-                  <b>09.20</b>
-                </span>
-                <span className="design"></span>
-                <span className="icons">
-                  <i className="fa-solid fa-wifi"></i>
-                  <i className="fa-solid fa-signal fa-sm"></i>
-                </span>
-              </header>
-              <div className="mages">
-                <img
-                  src="/tomato.jpeg"
-                  alt="product-slides"
-                  className="mages-slide"
-                />
+          {/* right: phones on desktop, laptop on mobile */}
+          <div className="flex-1 flex items-center justify-center w-full">
 
-                <div className="product-desc">
-                  <p>fresh derica tomatoes from superGreen farm</p>
-                  <p>
-                    <span>Name:</span> <span>Tomatoe</span>
-                  </p>
-                  <p>
-                    <span>Quantiy:</span> <span>1kg</span>
-                  </p>
-                  <p>
-                    <span>Price:</span> <span>$7/kilo</span>
-                  </p>
-                  <br />
-                </div>
-                <div className="seller">
-                  <img
-                    src="/260x260-pp.jpg"
-                    alt="sellers image"
-                    className="sellers-img"
-                  />
+            {/* ── Desktop: 3 overlapping phones ── */}
+            <div className="hidden lg:block">
+              <div className="b">
 
-                  <div className="seller-profile">
-                    <p>selers Name</p>
-                    <p>selers Name</p>
+                {/* phone 1 — shop */}
+                <div className="phone">
+                  <div className="phone1">
+                    <PhoneHeader />
+                    <SearchBox />
+                    <CategoryPreview />
+                    <ProductCard />
+                    <BottomNav activeTab="shop" />
                   </div>
                 </div>
-                <button className="order">order button</button>
-                <footer className="footer1">
-                  <div>
-                    <i className="fa-solid fa-house"></i>
-                    <p>Home</p>
-                  </div>
 
-                  <div>
-                    <i
-                      className="fa-solid fa-bag-shopping"
-                      style={{ color: " #179631" }}
-                    ></i>
-                    <p>Shop</p>
+                {/* phone 2 — product detail */}
+                <div className="phone phonee">
+                  <div className="phone2">
+                    <PhoneHeader />
+                    <div className="mages">
+                      <ProductPreview />
+                      <SellerPreview />
+                      <button className="order">🛒 Order Now</button>
+                      <BottomNav activeTab="shop" />
+                    </div>
                   </div>
+                </div>
 
-                  <div>
-                    <i className="fa-solid fa-newspaper"></i>
-                    <p>Blog</p>
+                {/* phone 3 — cart */}
+                <div className="phone phonee">
+                  <div className="phone3">
+                    <div className="cart-header">
+                      <p style={{ fontSize: 10, fontWeight: 700 }} className="text-gray-800">My Cart</p>
+                      <span className="bg-green-600 text-white rounded-full px-2" style={{ fontSize: 7 }}>3 items</span>
+                    </div>
+                    <CartPreview />
+                    <BottomNav activeTab="shop" />
                   </div>
+                </div>
 
-                  <div>
-                    <i className="fa-solid fa-user"></i>
-                    <p>Profile</p>
-                  </div>
-                </footer>
               </div>
             </div>
-          </div>
 
-          <div className="phone phonee">
-            <div className="phone3">
-              <header>
-                <span className="icons">
-                  <b>09.20</b>
-                </span>
-                <span className="design"></span>
-                <span className="icons">
-                  <i className="fa-solid fa-wifi"></i>
-                  <i className="fa-solid fa-signal fa-sm"></i>
-                  <i className="fa-solid fa-battery-half fa-sm"></i>
-                </span>
-              </header>
-
-              <div className="search-container">
-                <div className="search-box">
-                  <input
-                    type="text"
-                    placeholder="Search in here"
-                    className="search-input"
-                  />
-                  <span className="search-icon">🔍</span>
-                </div>
-
-                <button className="search-button">+</button>
-              </div>
-
-              <div>
-                <div className="items">
-                  <div>
-                    <img
-                      src="/tomato.jpeg"
-                      alt="item image"
-                      className="cart-img"
-                    />
-                  </div>
-                  <div className="cart-desc">
-                    <p>item name</p>
-                    <p>item quantity</p>
-                    <p>item price</p>
-                    <button>delete item</button>
-                  </div>
-                </div>
-
-                <div className="items">
-                  <div>
-                    <img
-                      src="/irish potatoe.jpeg"
-                      alt="item image"
-                      className="cart-img"
-                    />
-                  </div>
-                  <div className="cart-desc">
-                    <p>item name</p>
-                    <p>item quantity</p>
-                    <p>item price</p>
-                    <button>delete item</button>
-                  </div>
-                </div>
-
-                <div className="items">
-                  <div>
-                    <img
-                      src="/rice grain.jpeg"
-                      alt="item image"
-                      className="cart-img"
-                    />
-                  </div>
-                  <div className="cart-desc">
-                    <p>item name</p>
-                    <p>item quantity</p>
-                    <p>item price</p>
-                    <button>delete item</button>
-                  </div>
-                </div>
-              </div>
-              <footer className="footer1">
-                <div>
-                  <i className="fa-solid fa-house"></i>
-                  <p>Home</p>
-                </div>
-
-                <div>
-                  <i
-                    className="fa-solid fa-bag-shopping"
-                    style={{ color: " #179631" }}
-                  ></i>
-                  <p>Shop</p>
-                </div>
-
-                <div>
-                  <i className="fa-solid fa-newspaper"></i>
-                  <p>Blog</p>
-                </div>
-
-                <div>
-                  <i className="fa-solid fa-user"></i>
-                  <p>Profile</p>
-                </div>
-              </footer>
+            {/* ── Mobile: laptop mockup ── */}
+            <div className="lg:hidden w-full max-w-sm">
+              <LaptopDesign />
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="hero">
-        <div className="hero-left">
-          <h2> NEW ARRIVALS ONLY</h2>
-          <div>
-            <div className="hand-hand-icon">
-              <p>new</p>
-              <img src="/wave (1).png" alt="avatarpics" />
-            </div>
-            <p>products</p>
-            <p>for all meal</p>
-          </div>
-          <div className="hero-latest-btn">
-            <div>Check Now</div>
           </div>
         </div>
+      </section>
 
-        <div className="hero-right">
-          <img src="/plant.png" alt="avatar" />
-        </div>
-      </div>
+      <Features />
+      <FeaturedProducts />
+      <ComingSoon />
     </>
   );
 }

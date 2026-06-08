@@ -1,13 +1,24 @@
+.explore-page {
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
 
 .main-section {
   display: flex;
+  max-width: 1400px;
 }
+
+
 
 .product-grid {
   margin: 5px auto;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  
+  
+  
 }
 
 .product-section {
@@ -21,27 +32,128 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: auto;
   margin-bottom: 20px;
-  border-bottom: 2px solid rgba(45, 35, 35, 0.367);
-  padding: 15px 0;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  position: sticky;
+  top: 150px;
+  z-index: 50;
+  gap:24px;
+  max-width: 650px;
 }
+
+
 
 .section-title {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
+  color: #111827;
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+.product-count {
+  font-size: 18px;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+
+
 .product-filter {
-  padding: 8px 12px;
-  border-radius: 5px;
- 
+  padding: 10px 12px;
+  padding-right: 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   background-color: #fff;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  max-width: 250px;
+  min-width: 200px;
+  min-width: 200px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.product-filter:hover {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+.product-filter:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
 }
 
 select{
   border: 1px solid #ccc;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .explore-page {
+    padding: 16px;
+  }
+
+  .product-header {
+    top: 16px;
+    padding: 16px 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .product-count {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+  }
+
+  .product-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .product-header-actions {
+    width: 100%;
+  }
+
+  .product-filter {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }

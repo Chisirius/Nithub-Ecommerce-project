@@ -1,0 +1,153 @@
+/* === REVIEWS PAGE === */
+.reviews-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* === REVIEW CARD === */
+  .review-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .review-product {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .review-product img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .product-info {
+    flex: 1;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 8px 0;
+  }
+  
+  .review-rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  
+  .review-date {
+    font-size: 13px;
+    color: #6b7280;
+  }
+  
+  .review-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .review-text {
+    flex: 1;
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .review-status {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+  
+  .status-published {
+    background: #d1fae5;
+    color: #065f46;
+  }
+  
+  .status-pending {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  .review-actions {
+    display: flex;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .review-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #e5e7eb;
+    background: white;
+  }
+  
+  .review-action-btn.edit {
+    color: #2E7D32;
+  }
+  
+  .review-action-btn.edit:hover {
+    background: #f0f9f4;
+    border-color: #2E7D32;
+  }
+  
+  .review-action-btn.delete {
+    color: #ef4444;
+  }
+  
+  .review-action-btn.delete:hover {
+    background: #fef2f2;
+    border-color: #ef4444;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .review-card {
+      padding: 20px;
+    }
+  
+    .review-content {
+      flex-direction: column;
+    }
+  
+    .review-actions {
+      flex-direction: column;
+    }
+  
+    .review-action-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  

@@ -1,55 +1,15 @@
-import "./navbar.css";
+import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 
-function Navbar() {
+import React from "react";
+
+function FilterBar() {
   return (
-    <header className="head">
-      <div className="logo">
-        <h1>superGreen</h1>
-      </div>
-      <div className="search-container">
-        <div className="search-boxx">
-          <input
-            type="text"
-            placeholder="Search in here"
-            className="search-input"
-          />
-          <span className="search-icon">🔍</span>
-        </div>
-
-        <button className="search-buttonn">+</button>
-      </div>
-      <div className="utilities">
-       
-        <div className="account">
-       <NavLink
-          to="/signup"
-          className={({ isActive }) =>
-          isActive ? "signup-button active" : "signup-button"
-       }>
-           <h4> <i className="fa-regular fa-user fa-lg"></i> Sign up </h4>
-        </NavLink>
-        </div>
-
-        <div className="account">
-          <i className="fa-regular fa-circle-question fa-lg"></i>
-          <h4>Profile</h4>
-          <i className="fa-solid fa-angle-down fa-2xs"></i>
-        </div>
-        
-        <div className="account">
-       <NavLink
-          to="/Cart"
-          className={({ isActive }) =>
-          isActive ? "signup-button active" : "signup-button"
-       }>
-           <h4> <i className="fa-solid fa-cart-shopping fa-lg" /> Cart </h4>
-        </NavLink>
-        </div>
-        
-      </div>
-    </header>
+    <div className="flex bg-emerald-50 p-[5px] justify-center gap-[75px] text-[18px] border-b-[4px] border-b-[#ddd] shadow-md sticky top-16 z-50 ">
+      <NavLink to= '/Home'>Home</NavLink>
+      <NavLink to= '/Explore'>Explore</NavLink>
+    </div>
   );
 }
 
-export default Navbar;
+export default FilterBar;

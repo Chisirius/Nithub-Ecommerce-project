@@ -80,7 +80,7 @@
   
   .remove-btn {
     background: none;
-    border: none;
+    border: 2px solid red;
     color: #ef4444;
     cursor: pointer;
     font-size: 0.9rem;
@@ -99,8 +99,8 @@
     color: #111827;
   }
   
-  .checkout-btn {
-    background-color: #2563eb;
+  .checkout-btn{
+    background-color: #388E3C;
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -113,6 +113,10 @@
   }
   
   .checkout-btn:hover {
-    background-color: #1d4ed8;
+    background-color: #4e7f50;
   }
   
+  option{
+    background-color: red;
+    height : 35Px;
+  }

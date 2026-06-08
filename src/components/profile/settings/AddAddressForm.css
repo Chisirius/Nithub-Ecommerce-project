@@ -1,0 +1,63 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .address-modal {
+    width: 500px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .address-form input,
+  .address-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .cancel {
+    background: #eee;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+  
+  .save {
+    background: #2e7d32;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }

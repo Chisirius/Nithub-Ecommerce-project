@@ -1,79 +1,204 @@
-import React, { useEffect, useState } from 'react'
-import './explore.css'
-import AllProduct from '../../components/allproduct/AllProduct'
-import allData from '../../components/assets/allData'
-import Sidebar from '../../components/sidebar/Sidebar';
-import { useNavigate } from 'react-router-dom';
+import React, {useContext, useEffect, useState, useMemo } from "react";
+import "./explore.css";
+import AllProduct from "../../features/products/AllProduct";
+import { getAllProducts } from "../../services/productService"
+import Sidebar from "../../components/Sidebar/Sidebar";
+import { SearchContext } from "../../hooks/search/SearchContext";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Explore() {
-  const[sortedData, setSortedData] =useState ([...allData]);
-  const [sortOrder, setSortOrder] = useState('relevance');
-  const [activeCategory, setActiveCategory] = useState('')
-  
+  const [products, setProducts] = useState([]);
 
-    const navigate = useNavigate();
-  useEffect(
-   ()=>{
-    let filteredProduct = (activeCategory
-      ? allData.filter((data) => data.category === activeCategory)
-      : [...allData] ) ;
+  const [loading, setLoading] = useState(true);
 
-     if(sortOrder ==='asc'){
-      filteredProduct.sort((a,b)=> a.new_price - b.new_price)
-    }else if (sortOrder ==='desc'){
-      filteredProduct.sort((a,b)=> b.new_price - a.new_price)
-    }else{
-      [...allData]
+  const [error, setError] = useState("");
+
+  const [sortOrder, setSortOrder] = useState("relevance");
+
+  const [activeCategory, setActiveCategory] =
+    useState("all");
+
+  const { searchQuery, setSearchQuery } =
+    useContext(SearchContext);
+
+  const navigate = useNavigate();
+
+  const location = useLocation();
+
+  // -------------------------
+  // FETCH PRODUCTS (FIXED)
+  // -------------------------
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const data = await getAllProducts();
+       
+
+        setProducts(data);
+      } catch (error) {
+        console.log(error);
+
+        setError("Failed to fetch products");
+      } finally {
+        setLoading(false);
+      }
     };
 
-setSortedData(filteredProduct)
- }, [sortOrder, activeCategory]);
+    fetchProducts();
+  }, []);
 
- const goToProduct = (product) =>{
-navigate(`/productDesc/${product.id}`, {state: {product}});
-};
+  // -------------------------
+  // FILTER + SORT PRODUCTS
+  // -------------------------
+  const sortedData = useMemo(() => {
+    let filteredProduct = products;
+
+    if (activeCategory !== "all") {
+      filteredProduct = filteredProduct.filter(
+        (product) =>
+          product.category.toLowerCase() ===
+          activeCategory.toLowerCase()
+      );
+    }
+
+    if (searchQuery.trim() !== "") {
+      filteredProduct = filteredProduct.filter(
+        (product) =>
+          product.name
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase())
+      );
+    }
+
+    if (sortOrder === "asc") {
+      filteredProduct = [...filteredProduct].sort(
+        (a, b) => a.price - b.price
+      );
+    } else if (sortOrder === "desc") {
+      filteredProduct = [...filteredProduct].sort(
+        (a, b) => b.price - a.price
+      );
+    }
+
+    return filteredProduct;
+  }, [products, activeCategory, searchQuery, sortOrder]);
+
+  // -------------------------
+  // NAVIGATION
+  // -------------------------
+  const goToProduct = (product) => {
+    navigate(`/productDesc/${product.id}`, {
+      state: { product },
+    });
+  };
+
+  // -------------------------
+  // CLEAR SEARCH ON CATEGORY CHANGE
+  // -------------------------
+  useEffect(() => {
+    setSearchQuery("");
+  }, [activeCategory]);
+
+  // -------------------------
+  // CLEAR SEARCH ON EXIT
+  // -------------------------
+  useEffect(() => {
+    return () => {
+      if (location.pathname === "/explore") {
+        setSearchQuery("");
+      }
+    };
+  }, [location.pathname]);
+
+  // -------------------------
+  // LOADING UI
+  // -------------------------
+  if (loading) {
+    return <h2>Loading products...</h2>;
+  }
+
+  // -------------------------
+  // ERROR UI
+  // -------------------------
+  if (error) {
+    return <h2>{error}</h2>;
+  }
 
   return (
-        <div className="page2">
+    <div className="page2 explore-page">
       <div className="main-section">
-        
-        <Sidebar 
-        activeCategory = {activeCategory}
-        onActiveCategory ={setActiveCategory}
+        <Sidebar
+          activeCategory={activeCategory}
+          onActiveCategory={setActiveCategory}
         />
-        
-          
-          <section className="product-display">
-            <div className="product-header">
-              <h2 className="section-title">{activeCategory ? activeCategory : 'All Products'}</h2>
-              <select className="product-filter" value={sortOrder} onChange={e => setSortOrder(e.target.value)}>
-                <option value="relevance">Sort by: Relevance</option>
-                <option value="asc">Price: Low to High</option>
-                <option value="desc">Price: High to Low</option>
+
+        <section className="product-display">
+          <div className="product-header">
+            <h2 className="section-title">
+              {activeCategory
+                ? activeCategory
+                : "All Products"}
+
+              <span className="product-count">
+                ({sortedData.length})
+              </span>
+            </h2>
+
+            <div className="product-header-actions">
+              <select
+                className="product-filter"
+                value={sortOrder}
+                onChange={(e) =>
+                  setSortOrder(e.target.value)
+                }
+              >
+                <option value="relevance">
+                  Sort by: Relevance
+                </option>
+
+                <option value="asc">
+                  Price: Low to High
+                </option>
+
+                <option value="desc">
+                  Price: High to Low
+                </option>
               </select>
             </div>
-           
-          <div className="product-grid">
-         {sortedData.map((product, i)=> {
-          return(
-            <AllProduct 
-            key ={i}
-            p_name ={product.name}
-            image={product.image}
-            new_price={product.new_price}
-            old_price={product.old_price}
-            id={product.id}
-            product={product}
-            onClick = {()=> goToProduct(product)}
-            />
-          )
-         })}
-    
           </div>
-      </section>
+
+          <div className="product-grid">
+            {sortedData.length === 0 ? (
+              <div className="no-results">
+                <h3>
+                  Product not available at the moment
+                </h3>
+
+                <p>
+                  Please try a different search or category
+                </p>
+              </div>
+            ) : (
+              sortedData.map((product) => (
+                <AllProduct
+                  key={product.id} 
+                  p_name={product.name}
+                  image={product.images?.[0]}
+                  new_price={product.price}
+                  old_price={product.oldPrice}
+                  id={product.id}
+                  product={product}
+                  onClick={() =>
+                    goToProduct(product)
+                  }
+                />
+              ))
+            )}
+          </div>
+        </section>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default Explore
+export default Explore;

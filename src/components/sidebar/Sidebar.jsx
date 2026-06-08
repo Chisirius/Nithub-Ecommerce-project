@@ -1,32 +1,43 @@
-import categories from '../assets/allCategories'
+import categories from '../../features/products/data/allCategories'
 import './Sidebar.css'
+import { ChevronRight } from 'lucide-react';
 
 import React from 'react'
 
 function Sidebar({activeCategory, onActiveCategory, }) {
   return (
-    
-    <aside>
-    <h1>Categories</h1>
-        <hr/>
-     <ul >
-     <li
+
+  <div className='sidebar-container'> 
+    <aside className="sidebar">
+      <h1  className="sidebar-title">Categories</h1>
+      <div className="sidebar-divider"></div>
+     <ul className="category-list">
+        <li
             className={`category-item ${!activeCategory ? "active" : ""}`}
-            onClick={() => onActiveCategory("")} >
-            All Products {!activeCategory && <span>&gt;</span>}
-            
+            onClick={() => onActiveCategory("all")} 
+        >
+          <span>All Products</span>   
+          {!activeCategory && 
+          <ChevronRight size={18} className="category-arrow"/>
+          }  
           </li>
-      {categories.map((category)=> {
+
+        {categories.map((category)=> {
         return(
-          <li className={`category-item ${activeCategory===category? 'active': ''}`} 
-          onClick={()=> onActiveCategory(category)} key={category}>
-            {category} {activeCategory===category && <span>&gt;</span>}
-            </li>
+          <li 
+            className={`category-item ${activeCategory===category? 'active': ''}`} 
+            onClick={()=> onActiveCategory(category)} 
+            key={category}
+          >
+           <span>{category}</span>  
+           {activeCategory===category && <ChevronRight size={18} className="category-arrow" />}
+          </li>
         )
       })}
       
      </ul>
     </aside>
+  </div>
     
   )
 }

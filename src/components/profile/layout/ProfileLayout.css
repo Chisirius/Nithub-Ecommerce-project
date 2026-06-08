@@ -1,0 +1,37 @@
+/* === PROFILE LAYOUT === */
+.profile-layout {
+    min-height: 100vh;
+    background: #F8FAF8;
+    padding: 24px;
+  }
+  
+  .profile-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+  }
+  
+  .profile-main-content {
+    min-width: 0;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 1024px) {
+    .profile-container {
+      grid-template-columns: 240px 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .profile-layout {
+      padding: 16px;
+    }
+  
+    .profile-container {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+  
