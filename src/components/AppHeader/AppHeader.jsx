@@ -1,12 +1,11 @@
 import "./AppHeader.css";
-import { NavLink, useNavigate, useLocation  } from "react-router-dom";
-import { useContext, useState } from 'react'
-import { CartContext } from '../../hooks/CartContext'
-import { SearchContext } from "../../hooks/search/SearchContext";
-import { useAuth } from "../../hooks/AuthContext"
-import { Search, ChevronDown, ShoppingCart, User, Wand2 } from "lucide-react";
-import { useWishlist } from "../../hooks/useWishlist";
-
+import {NavLink, useLocation, useNavigate} from "react-router-dom";
+import {useContext, useState} from 'react'
+import {CartContext} from '../../hooks/CartContext'
+import {SearchContext} from "../../hooks/search/SearchContext";
+import {useAuth} from "../../hooks/AuthContext"
+import {ChevronDown, Search, ShoppingCart, User, Wand2} from "lucide-react";
+import {useWishlist} from "../../hooks/useWishlist";
 
 
 function Navbar() {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ProfileLayout from '../components/profile/layout/profileLayout';
 import OrdersPage from '../pages/orders/OrderPage';
 import VouchersPage from '../components/profile/vouchers/vouchers';

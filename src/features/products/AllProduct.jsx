@@ -1,11 +1,10 @@
-import { useNavigate } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import './allProduct.css'
-import React from 'react'
-import { useContext } from 'react'
-import { CartContext } from '../../hooks/CartContext'
-import { ShoppingCart, Heart } from 'lucide-react';
-import { useWishlist } from '../../hooks/useWishlist'
-import { useAuth } from '../../hooks/AuthContext'
+import React, {useContext} from 'react'
+import {CartContext} from '../../hooks/CartContext'
+import {Heart, ShoppingCart} from 'lucide-react';
+import {useWishlist} from '../../hooks/useWishlist'
+import {useAuth} from '../../hooks/AuthContext'
 
 function AllProduct({
   p_name,

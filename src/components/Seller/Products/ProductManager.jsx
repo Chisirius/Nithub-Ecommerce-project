@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Filter, Edit2, Trash2, MoreVertical, Grid, List } from 'lucide-react';
-import { getSellerProducts, deleteProductAPI, updateProductAPI } from '../../../services/productService'
+import React, {useEffect, useState} from 'react';
+import {Edit2, Filter, Grid, List, MoreVertical, Search, Trash2} from 'lucide-react';
+import {deleteProductAPI, getSellerProducts, updateProductAPI} from '../../../services/productService'
 import './ProductManager.css';
-import { categories } from './productCategory';
+import {categories} from './productCategory';
 import EditProductModal from './EditProductModal';
-
 
 
 function ProductsManagement() {

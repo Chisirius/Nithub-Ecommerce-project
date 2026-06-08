@@ -3,7 +3,6 @@ import './ProfileLayout.css';
 import ProfileSidebar from './profileSidebar';
 
 
-
 function ProfileLayout({ children, activePage, onPageChange }) {
   return (
     <div className="profile-layout">

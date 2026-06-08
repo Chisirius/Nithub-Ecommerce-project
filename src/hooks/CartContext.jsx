@@ -1,10 +1,5 @@
-import { createContext, useEffect, useState } from "react";
-import {
-  getCart,
-  addToCartAPI,
-  removeFromCartAPI,
-  updateCartQtyAPI,
-} from "../services/cartServices";
+import {createContext, useEffect, useState} from "react";
+import {addToCartAPI, getCart, removeFromCartAPI, updateCartQtyAPI,} from "../services/cartServices";
 
 export const CartContext = createContext();
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import SellerLayout from '../components/Seller/Layout/SellerLayout';
 import Dashboard from '../components/Seller/Dashboard/Dashboard';
 import ProductsManagement from '../components/Seller/Products/ProductManager';

@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import "./LoginSignup.css"
-import { NavLink, useNavigate } from 'react-router-dom'
-import { useAuth } from '../../hooks/AuthContext'
-
-
+import {NavLink, useNavigate} from 'react-router-dom'
+import {useAuth} from '../../hooks/AuthContext'
 
 
 function LoginSignup() {

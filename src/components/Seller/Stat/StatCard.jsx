@@ -1,7 +1,6 @@
 import React from 'react';
-import {  TrendingUp, TrendingDown } from 'lucide-react';
+import {TrendingDown, TrendingUp} from 'lucide-react';
 import './StatCard.css';
-
 
 
 function StatCard({ title, value, icon: Icon, trend, trendLabel, color = 'green' }) {

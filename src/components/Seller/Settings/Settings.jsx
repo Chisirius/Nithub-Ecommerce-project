@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Upload, Save, Lock, Bell, Package } from 'lucide-react';
+import React, {useState} from 'react';
+import {Bell, Lock, Package, Save, Upload} from 'lucide-react';
 import './Settings.css';
 
 function SettingsPage() {

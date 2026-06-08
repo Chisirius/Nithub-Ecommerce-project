@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { User, Mail, MapPin, Edit2, CreditCard, Bell } from 'lucide-react';
+import React from 'react';
+import {Bell, CreditCard, Edit2, MapPin, User} from 'lucide-react';
 import './AccountOverview.css';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../../hooks/AuthContext';
-import { useAddress } from '../../../hooks/AddressContext';
+import {NavLink, useNavigate} from 'react-router-dom';
+import {useAuth} from '../../../hooks/AuthContext';
+import {useAddress} from '../../../hooks/AddressContext';
 
 function AccountOverview() {
  const {user} =useAuth()

@@ -1,19 +1,8 @@
-import React, {
-  useEffect,
-  useState
-} from 'react';
+import React, {useEffect, useState} from 'react';
 
-import {
-  Package,
-  Truck,
-  CheckCircle,
-  XCircle,
-  RotateCcw
-} from 'lucide-react';
+import {CheckCircle, Package, RotateCcw, Truck, XCircle} from 'lucide-react';
 
-import {
-  getOrders
-} from '../../services/orderService';
+import {getOrders} from '../../services/orderService';
 
 import './OrderPage.css';
 

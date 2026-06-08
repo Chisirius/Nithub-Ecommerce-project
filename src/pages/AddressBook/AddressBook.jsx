@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { MapPin, Plus, Edit2, Trash2, CheckCircle } from 'lucide-react';
+import React, {useState} from 'react';
+import {CheckCircle, Edit2, MapPin, Plus, Trash2} from 'lucide-react';
 import './AddressBook.css';
-import { useAddress } from '../../hooks/AddressContext';
+import {useAddress} from '../../hooks/AddressContext';
 import AddAddressForm from '../../components/profile/settings/AddAddress';
-import { useLocation, useNavigate } from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import AddressEditForm from '../../components/profile/account/AddressEditForm';
 
 

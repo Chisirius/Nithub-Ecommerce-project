@@ -1,7 +1,7 @@
-import { NavLink, useNavigate } from 'react-router-dom'
+import {NavLink, useNavigate} from 'react-router-dom'
 import './login.css'
-import React, { useState } from 'react'
-import { useAuth } from '../../hooks/AuthContext'
+import React, {useState} from 'react'
+import {useAuth} from '../../hooks/AuthContext'
 
 function Login() {
   const {login} = useAuth()

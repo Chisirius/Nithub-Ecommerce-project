@@ -1,18 +1,8 @@
-import React, {
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, {useEffect, useMemo, useState,} from 'react';
 
-import {
-  Search,
-  Eye,
-  Download,
-} from 'lucide-react';
+import {Download, Eye, Search,} from 'lucide-react';
 
-import {
-  getSellerOrders,
-} from '../../../services/orderService';
+import {getSellerOrders,} from '../../../services/orderService';
 
 import './Orders.css';
 

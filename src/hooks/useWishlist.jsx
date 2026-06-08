@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { WishlistContext } from "../hooks/wishlistContext";
+import {useContext} from "react";
+import {WishlistContext} from "../hooks/wishlistContext";
 
 export const useWishlist = () => {
   const {

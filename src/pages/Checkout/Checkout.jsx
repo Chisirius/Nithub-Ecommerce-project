@@ -1,26 +1,29 @@
 import './checkout.css'
-import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate, useSearchParams} from 'react-router-dom';
+import React, {useContext, useEffect, useState} from 'react';
+import {useNavigate, useSearchParams} from 'react-router-dom';
 import {
-  MapPin, CreditCard, Package, Lock, Check, X,
-  Plus, Phone, Smartphone, Truck, ShieldCheck,
-  ArrowLeft, MapPinOff,
+    ArrowLeft,
+    Check,
+    CreditCard,
+    MapPin,
+    MapPinOff,
+    Package,
+    Phone,
+    Plus,
+    ShieldCheck,
+    Truck,
+    X,
 } from 'lucide-react';
 
 import AddAddressForm from '../../components/profile/settings/AddAddress';
 
 
-import {
-  createOrderAPI,
-  initializePayment,
-  verifyPayment,
-} from "../../services/paymentServices";
+import {initializePayment, verifyPayment,} from "../../services/paymentServices";
 
-import { useAddress } from '../../hooks/AddressContext'; 
-import { CartContext } from '../../hooks/CartContext';
-import { OrderContext } from "../../hooks/OrderContext"
-import { useAuth } from "../../hooks/AuthContext"
- 
+import {useAddress} from '../../hooks/AddressContext';
+import {CartContext} from '../../hooks/CartContext';
+import {OrderContext} from "../../hooks/OrderContext"
+
 
 // ── Step Indicator ────────────────────────────────────────────────
 

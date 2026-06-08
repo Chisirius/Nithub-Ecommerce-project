@@ -1,11 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import {
-  getAddresses,
-  addAddress,
-  updateAddress,
-  deleteAddress,
-  setDefaultAddress,
-} from "../services/addressServices";
+import {createContext, useContext, useEffect, useState} from "react";
+import {addAddress, deleteAddress, getAddresses, setDefaultAddress, updateAddress,} from "../services/addressServices";
 
 const AddressContext = createContext();
 

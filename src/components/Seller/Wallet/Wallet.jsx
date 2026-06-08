@@ -1,19 +1,8 @@
-import React, {
-  useEffect,
-  useState
-} from 'react';
+import React, {useEffect, useState} from 'react';
 
-import {
-  DollarSign,
-  TrendingUp,
-  Clock,
-  ArrowDownCircle,
-  ArrowUpCircle,
-} from 'lucide-react';
+import {ArrowDownCircle, ArrowUpCircle, Clock, DollarSign, TrendingUp,} from 'lucide-react';
 
-import {
-  getSellerWallet
-} from '../../../services/orderService';
+import {getSellerWallet} from '../../../services/orderService';
 
 import './Wallet.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Ticket, Copy, CheckCircle } from 'lucide-react';
-import { vouchers } from '../data/mockProfileData';
+import {CheckCircle, Copy, Ticket} from 'lucide-react';
+import {vouchers} from '../data/mockProfileData';
 import './Vouchers.css';
 
 function VouchersPage() {

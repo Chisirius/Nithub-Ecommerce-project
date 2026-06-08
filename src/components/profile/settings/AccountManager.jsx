@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Upload, Save, User } from 'lucide-react';
+import React from 'react';
+import {Save, Upload, User} from 'lucide-react';
 import './AccountManager.css';
 
 function AccountManagementPage() {

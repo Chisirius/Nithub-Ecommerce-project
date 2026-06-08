@@ -1,20 +1,8 @@
 import React from 'react';
-import {
-  ShoppingBag,
-  Mail,
-  Star,
-  Ticket,
-  Heart,
-  Users,
-  Eye,
-  Search,
-  Sparkles,
-  User
-} from 'lucide-react';
+import {Heart, Mail, ShoppingBag, Sparkles, User} from 'lucide-react';
 import './ProfileSidebar.css';
-import { becomeSeller } from "../../../services/userServices";
-import { useNavigate } from "react-router-dom";
-
+import {becomeSeller} from "../../../services/userServices";
+import {useNavigate} from "react-router-dom";
 
 
 const menuItems = [

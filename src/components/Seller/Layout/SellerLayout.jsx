@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import SellerSidebar from './SellerSidebar';
 import './SellerLayout.css';
-
 
 
 function SellerLayout({ children, activePage, onPageChange }) {

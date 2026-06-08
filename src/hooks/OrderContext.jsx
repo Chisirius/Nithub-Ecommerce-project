@@ -1,15 +1,9 @@
-import {
-    createContext,
-    useState,
-    useEffect,
-  } from "react";
-  
-  import {
-    getOrdersAPI,
-  } from "../services/orderService";
-  
-  
-  export const OrderContext =
+import {createContext, useEffect, useState,} from "react";
+
+import {getOrdersAPI,} from "../services/orderService";
+
+
+export const OrderContext =
     createContext();
   
   export const OrderProvider = ({

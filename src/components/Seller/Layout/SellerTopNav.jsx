@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { Search, Bell, MessageSquare, PlusCircle, Menu, ChevronDown } from 'lucide-react';
+import React, {useState} from 'react';
+import {Bell, ChevronDown, Menu, MessageSquare, PlusCircle, Search} from 'lucide-react';
 import './SellerTopNav.css';
-
 
 
 function SellerTopNav({ onAddProduct, onMenuToggle }) {

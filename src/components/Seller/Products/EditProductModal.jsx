@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { X, Save, Upload, Image as ImageIcon } from 'lucide-react';
+import React, {useState} from 'react';
+import {Image as ImageIcon, Save, Upload, X} from 'lucide-react';
 //import { SellerProduct } from '../data/mockData';
 import './EditProduct.css';
-import { categories } from './productCategory';
-import { uploadImage } from '../../../services/uploadService';
-
+import {categories} from './productCategory';
+import {uploadImage} from '../../../services/uploadService';
 
 
 function EditProductModal({ product, onClose, onSave }) {

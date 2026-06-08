@@ -1,6 +1,6 @@
 import React from 'react';
-import { Star, Edit2, Trash2 } from 'lucide-react';
-import { reviews } from '../data/mockProfileData';
+import {Edit2, Star, Trash2} from 'lucide-react';
+import {reviews} from '../data/mockProfileData';
 import './ReviewPage.css';
 
 function ReviewsPage() {

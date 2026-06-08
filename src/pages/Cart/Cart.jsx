@@ -1,8 +1,8 @@
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import './cart.css'
-import { useContext } from 'react'
-import { CartContext } from '../../hooks/CartContext'
-import { Trash2 } from 'lucide-react'
+import {useContext} from 'react'
+import {CartContext} from '../../hooks/CartContext'
+import {Trash2} from 'lucide-react'
 
 function Cart() {
   const {

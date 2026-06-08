@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { Heart, ShoppingCart } from 'lucide-react';
+import React, {useContext} from 'react';
+import {Heart, ShoppingCart} from 'lucide-react';
 import './Wishlist.css';
-import { CartContext } from '../../../hooks/CartContext';
-import { WishlistContext } from '../../../hooks/wishlistContext';
+import {CartContext} from '../../../hooks/CartContext';
+import {WishlistContext} from '../../../hooks/wishlistContext';
 
 function WishlistPage() {
   // Using first 6 products as wishlist items

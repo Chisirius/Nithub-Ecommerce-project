@@ -1,22 +1,10 @@
-import React, {
-  useEffect,
-  useState,
-} from 'react';
+import React, {useEffect, useState,} from 'react';
 
-import {
-  DollarSign,
-  ShoppingBag,
-  Package,
-  Truck,
-  TrendingUp,
-  ArrowUpRight,
-} from 'lucide-react';
+import {DollarSign, Package, ShoppingBag, TrendingUp, Truck,} from 'lucide-react';
 
 import StatCard from '../Stat/StatCard';
 
-import {
-  getSellerDashboard,
-} from '../../../services/orderService';
+import {getSellerDashboard,} from '../../../services/orderService';
 
 import './Dashboard.css';
 

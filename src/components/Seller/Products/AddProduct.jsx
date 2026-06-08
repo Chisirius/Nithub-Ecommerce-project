@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Upload, X, Plus, Save } from 'lucide-react';
+import React, {useState} from 'react';
+import {Plus, Save, Upload, X} from 'lucide-react';
 import './AddProduct.css';
-import { categories } from './productCategory';
+import {categories} from './productCategory';
 import api from '../../../services/api';
-import { createProduct } from '../../../services/productService';
+import {createProduct} from '../../../services/productService';
 
 function AddProduct() {
   const [formData, setFormData] = useState({

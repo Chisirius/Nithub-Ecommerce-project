@@ -1,17 +1,8 @@
-import {
-    createContext,
-    useContext,
-    useEffect,
-    useState,
-  } from "react";
-  
-  import {
-    getWishlist,
-    addToWishlist,
-    removeFromWishlist,
-  } from "../services/wishlistServices"
-  
- export const WishlistContext = createContext();
+import {createContext, useContext, useEffect, useState,} from "react";
+
+import {addToWishlist, getWishlist, removeFromWishlist,} from "../services/wishlistServices"
+
+export const WishlistContext = createContext();
  export const useWishlist = () => useContext(WishlistContext);
   
   export const WishlistProvider = ({ children }) => {

@@ -1,11 +1,11 @@
 import "./App.css";
 import "./index.css";
-import { Routes, Route } from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 
 
 import Shop from "../pages/Shop";
 import LocationHeader from "../components/locationHeader/LocationHeader";
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import Navbar from "../components/AppHeader/AppHeader";
 import {SearchProvider} from "../hooks/search/SearchContext"
 import LoginSignup from "../pages/LoginSignup/LoginSignup";
@@ -15,7 +15,7 @@ import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
 import Login from "../pages/Login/Login";
 import ProductDesc from "../pages/productDesc/ProductDesc";
-import { CartContext } from "../hooks/CartContext";
+import {CartContext} from "../hooks/CartContext";
 import SellerDashboard from "../pages/SellerDashboard";
 import ProfileDashboard from "../pages/profileDashboard";
 import ProtectedRoute from "../routes/protectedRoutes";
@@ -24,7 +24,6 @@ import AddressBookPage from "../pages/AddressBook/AddressBook";
 import NewsletterPreferencesPage from "../components/profile/newsLetter/NewsLetter";
 import OrdersPage from "../pages/orders/OrderPage";
 import Footer from "../components/FooterHelp./FooterHelp";
-
 
 
 function Toast() {

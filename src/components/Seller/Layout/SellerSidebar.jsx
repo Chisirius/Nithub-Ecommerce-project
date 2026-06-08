@@ -1,21 +1,16 @@
 import React from 'react';
 import {
-  LayoutDashboard,
-  Package,
-  PlusCircle,
-  ShoppingBag,
-  Users,
-  BarChart3,
-  Wallet,
-  Star,
-  Archive,
-  Settings,
-  LogOut,
-  ChevronRight,
+    Archive,
+    BarChart3,
+    ChevronRight,
+    LayoutDashboard,
+    Package,
+    PlusCircle,
+    ShoppingBag,
+    Wallet,
 } from 'lucide-react';
 import './SellerSidebar.css';
-import { useAuth } from '../../../hooks/AuthContext';
-
+import {useAuth} from '../../../hooks/AuthContext';
 
 
 const menuItems = [

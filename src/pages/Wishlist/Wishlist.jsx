@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { WishlistContext } from "../../hooks/wishlistContext";
+import {useContext} from "react";
+import {WishlistContext} from "../../hooks/wishlistContext";
 import "./Wishlist.css"
-import { CartContext } from "../../hooks/CartContext";
-import { ShoppingCart, Trash2 } from "lucide-react";
+import {CartContext} from "../../hooks/CartContext";
+import {ShoppingCart, Trash2} from "lucide-react";
 
 function Wishlist() {
   const { addToCart } = useContext(CartContext);

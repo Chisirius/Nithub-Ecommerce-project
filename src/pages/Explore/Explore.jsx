@@ -1,10 +1,10 @@
-import React, {useContext, useEffect, useState, useMemo } from "react";
+import React, {useContext, useEffect, useMemo, useState} from "react";
 import "./explore.css";
 import AllProduct from "../../features/products/AllProduct";
-import { getAllProducts } from "../../services/productService"
+import {getAllProducts} from "../../services/productService"
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { SearchContext } from "../../hooks/search/SearchContext";
-import { useLocation, useNavigate } from "react-router-dom";
+import {SearchContext} from "../../hooks/search/SearchContext";
+import {useLocation, useNavigate} from "react-router-dom";
 
 function Explore() {
   const [products, setProducts] = useState([]);
