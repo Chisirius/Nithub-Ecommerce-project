@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import SellerLayout from './Layout/SellerLayout';
-import Dashboard from './Dashboard/Dashboard';
-import ProductsManagement from './Products/ProductManager';
-import AddProduct from './Products/AddProduct';
-import OrdersManagement from './Orders/Orders';
-import WalletPage from './Wallet/Wallet';
-import SettingsPage from './Settings/Settings';
+import SellerLayout from '../components/Seller/Layout/SellerLayout';
+import Dashboard from '../components/Seller/Dashboard/Dashboard';
+import ProductsManagement from '../components/Seller/Products/ProductManager';
+import AddProduct from '../components/Seller/Products/AddProduct';
+import OrdersManagement from '../components/Seller/Orders/Orders';
+import WalletPage from '../components/Seller/Wallet/Wallet';
+import SettingsPage from '../components/Seller/Settings/Settings';
 
 function SellerDashboard() {
   const [activePage, setActivePage] = useState('dashboard');

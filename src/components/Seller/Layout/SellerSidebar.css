@@ -14,12 +14,12 @@
   }
   
   .seller-sidebar.collapsed {
-    width: 80px;
+    width: 50px;
   }
   
   /* === SIDEBAR HEADER === */
   .sidebar-header {
-    padding: 24px 20px;
+    padding: 20px 10px;
     border-bottom: 1px solid #e5e7eb;
   }
   
@@ -72,9 +72,9 @@
   .sidebar-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 20px;
-    margin: 2px 12px;
+    gap: 8px;
+    padding: 12px 5px;
+    margin: 2px 20px;
     width: calc(100% - 24px);
     border: none;
     background: transparent;
@@ -117,7 +117,7 @@
     margin-left: auto;
   }
   
-  .seller-sidebar.collapsed .sidebar-label,
+  
   .seller-sidebar.collapsed .sidebar-arrow {
     display: none;
   }
@@ -125,7 +125,7 @@
   /* === SELLER PROFILE CARD === */
   .seller-profile-card {
     padding: 16px;
-    margin: 12px;
+    margin: 5px;
     background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e9 100%);
     border-radius: 12px;
     border: 1px solid #c8e6c9;
@@ -187,28 +187,29 @@
   /* === RESPONSIVE === */
   @media (max-width: 1024px) {
     .seller-sidebar {
-      width: 80px;
+      width: 5px;
     }
   
-    .sidebar-label,
-    .sidebar-arrow,
-    .seller-profile-card {
+    .sidebar-arrow {
       display: none;
     }
   
     .sidebar-item {
       justify-content: center;
-      padding: 12px;
+      padding: 8px;
     }
-  }
-  
-  @media (max-width: 768px) {
+
+    .seller-profile-card {
+      width: 90%;
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #c8e6c9;
+    }
+
     .seller-sidebar {
-      transform: translateX(-100%);
-    }
-  
-    .seller-sidebar.mobile-open {
-      transform: translateX(0);
+      width: 200px;
+      background: #ffffff;
     }
   }
+  
   

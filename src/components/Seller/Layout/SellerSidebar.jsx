@@ -14,6 +14,7 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import './SellerSidebar.css';
+import { useAuth } from '../../../hooks/AuthContext';
 
 
 
@@ -22,25 +23,24 @@ const menuItems = [
   { id: 'products', label: 'Products', icon: Package },
   { id: 'add-product', label: 'Add Product', icon: PlusCircle },
   { id: 'orders', label: 'Orders', icon: ShoppingBag },
-  { id: 'customers', label: 'Customers', icon: Users },
   { id: 'analytics', label: 'Analytics', icon: BarChart3 },
   { id: 'wallet', label: 'Wallet', icon: Wallet },
-  { id: 'reviews', label: 'Reviews', icon: Star },
   { id: 'inventory', label: 'Inventory', icon: Archive },
 ];
 
-const bottomItems = [
-  { id: 'settings', label: 'Settings', icon: Settings },
-  { id: 'logout', label: 'Logout', icon: LogOut },
-];
+// const bottomItems = [
+//   { id: 'settings', label: 'Settings', icon: Settings },
+//   { id: 'logout', label: 'Logout', icon: LogOut },
+// ];
 
 function SellerSidebar({ activePage, onPageChange, collapsed = false }) {
+  const {user} = useAuth()
   return (
-    <aside className={`seller-sidebar ${collapsed ? 'collapsed' : ''}`}>
+    <aside className= 'seller-sidebar' >
       <div className="sidebar-header">
         <div className="sidebar-logo">
-          <div className="logo-icon">🌾</div>
-          {!collapsed && <span className="logo-text">MyAgro Seller</span>}
+          <div className="logo-icon">🌿</div>
+           <span className="logo-text">AgroMak Seller</span>
         </div>
       </div>
 
@@ -67,7 +67,7 @@ function SellerSidebar({ activePage, onPageChange, collapsed = false }) {
 
         <div className="sidebar-divider"></div>
 
-        <ul className="sidebar-menu sidebar-bottom">
+        {/* <ul className="sidebar-menu sidebar-bottom">
           {bottomItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -82,20 +82,20 @@ function SellerSidebar({ activePage, onPageChange, collapsed = false }) {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
       </nav>
 
       {!collapsed && (
         <div className="seller-profile-card">
           <div className="profile-avatar">
             <img
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+              src="https://images.unsplash.com/photo-1740252117044-2af197eea287?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Seller"
             />
           </div>
           <div className="profile-info">
-            <p className="profile-name">Green Farm Co.</p>
-            <p className="profile-email">greenfarm@myagro.com</p>
+            <p className="profile-name">{user?.name}</p>
+            <p className="profile-email">{user?.email}</p>
           </div>
         </div>
       )}

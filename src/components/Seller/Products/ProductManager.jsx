@@ -209,7 +209,7 @@ const handleUpdate = async (updatedProduct) => {
                   </div>
                 </div>
                 <div className="product-price-row">
-                  <span className="product-price">${product.price.toFixed(2)}</span>
+                  <span className="product-price">₦{product.price.toFixed(2)}</span>
                   <div className="product-actions">
                     <button className="action-btn edit" onClick={() => handleEditClick(product)}>
                       <Edit2 size={32} />
@@ -247,7 +247,7 @@ const handleUpdate = async (updatedProduct) => {
                     </div>
                   </td>
                   <td>{product.category}</td>
-                  <td className="price-cell">${product.price.toFixed(2)}</td>
+                  <td className="price-cell">₦{product.price}</td>
                   <td>
                     <span className={`stock-value ${product.stock === 0 ? 'danger' : ''}`}>
                       {product.stock}

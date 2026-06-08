@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SellerSidebar from './SellerSidebar';
-import SellerTopNav from './SellerTopNav';
 import './SellerLayout.css';
 
 
@@ -24,10 +23,7 @@ function SellerLayout({ children, activePage, onPageChange }) {
         collapsed={sidebarCollapsed}
       />
       <div className={`seller-main ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
-        <SellerTopNav
-          onAddProduct={handleAddProduct}
-          onMenuToggle={handleMenuToggle}
-        />
+        
         <main className="seller-content">
           {children}
         </main>

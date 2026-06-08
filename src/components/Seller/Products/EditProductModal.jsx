@@ -154,7 +154,7 @@ function EditProductModal({ product, onClose, onSave }) {
             <div className="form-section">
               <label className="section-label">Price*</label>
               <div className="input-with-prefix">
-                <span className="input-prefix">$</span>
+                <span className="input-prefix">₦</span>
                 <input
                   type="number"
                   name="price"

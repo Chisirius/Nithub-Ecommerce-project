@@ -199,7 +199,7 @@ function AddProduct() {
                 <div className="form-group">
                   <label className="form-label">Price*</label>
                   <div className="input-with-prefix">
-                    <span className="input-prefix">$</span>
+                    <span className="input-prefix">₦</span>
                     <input
                       type="number"
                       name="price"
@@ -216,7 +216,7 @@ function AddProduct() {
                 <div className="form-group">
                   <label className="form-label">Old Price</label>
                   <div className="input-with-prefix">
-                    <span className="input-prefix">$</span>
+                    <span className="input-prefix">₦</span>
                     <input
                       type="number"
                       name="oldPrice"
@@ -337,9 +337,9 @@ function AddProduct() {
                   <div className="preview-price">
                     {formData.price && (
                       <>
-                        <span className="preview-price-new">${formData.price}</span>
+                        <span className="preview-price-new">₦{formData.price}</span>
                         {formData.oldPrice && (
-                          <span className="preview-price-old">${formData.oldPrice}</span>
+                          <span className="preview-price-old">₦{formData.oldPrice}</span>
                         )}
                       </>
                     )}
