@@ -1,5 +1,5 @@
-import { Truck, Shield, Clock, Leaf} from "lucide-react";
-import { motion } from "framer-motion";
+import {Clock, Leaf, Shield, Truck} from "lucide-react";
+import {motion} from "framer-motion";
 
 export function Features() {
   const features = [

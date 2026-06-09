@@ -3,7 +3,7 @@ import './login.css'
 import React, {useState} from 'react'
 import {useAuth} from '../../hooks/AuthContext'
 
-function Login() {
+export function Login() {
   const {login} = useAuth()
   const navigate = useNavigate()
 
@@ -67,4 +67,4 @@ function Login() {
   )
 }
 
-export default Login
+

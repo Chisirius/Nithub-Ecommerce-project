@@ -7,7 +7,7 @@ import OrdersManagement from '../components/Seller/Orders/Orders';
 import WalletPage from '../components/Seller/Wallet/Wallet';
 import SettingsPage from '../components/Seller/Settings/Settings';
 
-function SellerDashboard() {
+export function SellerDashboard() {
   const [activePage, setActivePage] = useState('dashboard');
 
   const renderPage = () => {
@@ -71,4 +71,4 @@ function SellerDashboard() {
   );
 }
 
-export default SellerDashboard;
+

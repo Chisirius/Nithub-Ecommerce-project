@@ -19,7 +19,7 @@
 // }
 
 
-import { ShieldCheck, MapPin } from "lucide-react";
+import {MapPin, ShieldCheck} from "lucide-react";
 
 export function SellerPreview() {
   return (

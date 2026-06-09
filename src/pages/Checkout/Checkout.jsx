@@ -29,7 +29,7 @@ import {OrderContext} from "../../hooks/OrderContext"
 
 
 
-function StepIndicator({ steps }) {
+ function StepIndicator({ steps }) {
   return (
     <div className="flex items-center">
       {steps.map((step, i) => (
@@ -92,8 +92,7 @@ function EmptyAddressState({ onAddAddress }) {
 
 function SelectedAddressCard({
   address,
-  onChangeAddress,
-  onAddAddress,
+  onChangeAddress
 }) {
   return (
     <div className="border-2 border-[#2E7D32]/25 bg-[#F1F8F1] rounded-xl p-4">
@@ -310,7 +309,7 @@ function OrderSummaryItem({ item }) {
 
 // ── Main Checkout Page ────────────────────────────────────────────
 
-function Checkout() {
+export function Checkout() {
   const { cart, clearCart, subTotal } = useContext(CartContext);
   const {addresses, selectedCheckoutAddress, setSelectedCheckoutAddress, createAddress
   } = useAddress();
@@ -328,7 +327,7 @@ function Checkout() {
   const [loading, setLoading] = useState(false);
 
   
-  const defaultAddress =
+
     addresses.find((a) => a.isDefault) || addresses[0] || null;
     
     useEffect(() => {
@@ -728,5 +727,3 @@ function Checkout() {
     </div>
   );
 }
-
-export default Checkout;

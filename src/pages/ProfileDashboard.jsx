@@ -37,7 +37,7 @@ const RecentlySearchedPage = () => (
   </div>
 );
 
-function ProfileDashboard() {
+export function ProfileDashboard() {
   const [activePage, setActivePage] = useState('AccountOverview');
 
   const renderPage = () => {
@@ -76,4 +76,4 @@ function ProfileDashboard() {
   );
 }
 
-export default ProfileDashboard;
+

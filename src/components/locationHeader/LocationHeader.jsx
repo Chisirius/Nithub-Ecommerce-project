@@ -2,7 +2,7 @@ import "./locationHeader.css";
 
 import React from "react";
 
-function LocationHeader() {
+export function LocationHeader() {
   return (
     <div className="locationHeader">
       <div>
@@ -30,4 +30,4 @@ function LocationHeader() {
   );
 }
 
-export default LocationHeader;
+

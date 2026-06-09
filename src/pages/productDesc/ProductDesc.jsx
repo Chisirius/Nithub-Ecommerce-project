@@ -5,7 +5,7 @@ import {useContext, useState} from 'react';
 import {useAuth} from '../../hooks/AuthContext'
 
 
-function ProductDesc() {
+export function ProductDesc() {
   const location = useLocation();
    const product = location.state?.product;
    const { addToCart, cartIds } = useContext(CartContext)
@@ -66,7 +66,7 @@ function ProductDesc() {
 
     <div className="seller-section">
       <img
-        src="/260x260-pp.jpg"
+        src="https://images.unsplash.com/photo-1740252117044-2af197eea287?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Seller Image"
         className="seller-avatar"
       />
@@ -84,4 +84,3 @@ function ProductDesc() {
   )
 }
 
-export default ProductDesc

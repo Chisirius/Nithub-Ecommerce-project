@@ -1,6 +1,6 @@
 import categories from '../../features/products/data/allCategories'
 import './Sidebar.css'
-import { ChevronRight } from 'lucide-react';
+import {ChevronRight} from 'lucide-react';
 
 import React from 'react'
 

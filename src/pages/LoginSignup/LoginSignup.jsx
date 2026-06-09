@@ -4,7 +4,7 @@ import {NavLink, useNavigate} from 'react-router-dom'
 import {useAuth} from '../../hooks/AuthContext'
 
 
-function LoginSignup() {
+export function LoginSignup() {
   
   const {register} = useAuth()
   const navigate = useNavigate()
@@ -98,58 +98,3 @@ function LoginSignup() {
   )
 }
 
-export default LoginSignup
-
-
-{/* <div className="table-actions">
-                      
-                      <button className="action-btn delete">
-                        <Trash2 size={32} />
-                      </button>
-                      <button className="action-btn more">
-                        <MoreVertical size={16} />
-                      </button> */}
-
-                      // .action-btn {
-                      //   width: 36px;
-                      //   height: 36px;
-                      //   display: flex;
-                      //   align-items: center;
-                      //   justify-content: center;
-                      //   border: 1px solid #e5e7eb;
-                      //   background: white;
-                      //   border-radius: 8px;
-                      //   cursor: pointer;
-                      //   transition: all 0.2s ease;
-                      // }
-                      
-                      // .action-btn.edit {
-                      //   color: black;
-                      //   background:  #2E7D32;
-                        
-                      // }
-                      
-                      // .action-btn.edit:hover {
-                      //   background: #f0f9f4;
-                      //   border-color: #2E7D32;
-                        
-                      // }
-                      
-                      // .action-btn.delete {
-                      //   color: black;
-                      //   background: #ef4444;
-                      // }
-                      
-                      // .action-btn.delete:hover {
-                      //   background: #fef2f2;
-                      //   border-color: #ef4444;
-                      // }
-                      
-                      // .action-btn.more {
-                      //   color: #6b7280;
-                      // }
-                      
-                      // .action-btn.more:hover {
-                      //   background: #f3f4f6;
-                      //   border-color: #6b7280;
-                      // }

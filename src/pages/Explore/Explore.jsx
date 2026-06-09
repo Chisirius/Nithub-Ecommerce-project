@@ -6,7 +6,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import {SearchContext} from "../../hooks/search/SearchContext";
 import {useLocation, useNavigate} from "react-router-dom";
 
-function Explore() {
+export function Explore() {
   const [products, setProducts] = useState([]);
 
   const [loading, setLoading] = useState(true);
@@ -201,4 +201,3 @@ function Explore() {
   );
 }
 
-export default Explore;

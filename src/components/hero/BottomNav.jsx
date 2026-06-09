@@ -24,7 +24,7 @@
 //   }
 
 
-import { Home, ShoppingBag, BookOpen, User } from "lucide-react";
+import {BookOpen, Home, ShoppingBag, User} from "lucide-react";
 
 
 export function BottomNav({ activeTab = "home" }) {

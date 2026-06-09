@@ -55,8 +55,7 @@
 // }
 
 
-
-import { Star } from "lucide-react";
+import {Star} from "lucide-react";
 
 const products = [
   { id: 1, emoji: "🥬", name: "Spinach", price: "₦3" },

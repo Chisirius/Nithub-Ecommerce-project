@@ -8,7 +8,7 @@ import {ChevronDown, Search, ShoppingCart, User, Wand2} from "lucide-react";
 import {useWishlist} from "../../hooks/useWishlist";
 
 
-function Navbar() {
+export function AppHeader() {
 
   const {cart}= useContext(CartContext)
   const {wishlist} =useWishlist()
@@ -168,6 +168,6 @@ function Navbar() {
   
 }
 
-export default Navbar;
+
 
 

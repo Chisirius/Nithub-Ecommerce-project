@@ -1,15 +1,15 @@
 import "./hero.css";
-import { BottomNav } from "./BottomNav";
-import { Features } from "./Features";
-import { FeaturedProducts } from "./FeaturedProducts";
-import { ComingSoon } from "./ComingSoon";
-import { CartPreview } from "./ui/CartPreview";
-import { CategoryPreview } from "./ui/CategoryPreview";
-import { ProductCard } from "./ui/ProductCard";
-import { SearchBox } from "./ui/SearchBox";
-import { PhoneHeader } from "./ui/PhoneHeader";
-import { ProductPreview } from "./ui/ProductPreview";
-import { SellerPreview } from "./ui/SellerPreview";
+import {BottomNav} from "./BottomNav";
+import {Features} from "./Features";
+import {FeaturedProducts} from "./FeaturedProducts";
+import {ComingSoon} from "./ComingSoon";
+import {CartPreview} from "./ui/CartPreview";
+import {CategoryPreview} from "./ui/CategoryPreview";
+import {ProductCard} from "./ui/ProductCard";
+import {SearchBox} from "./ui/SearchBox";
+import {PhoneHeader} from "./ui/PhoneHeader";
+import {ProductPreview} from "./ui/ProductPreview";
+import {SellerPreview} from "./ui/SellerPreview";
 import HeroIntro from "./HeroIntro";
 import LaptopDesign from "./LaptopDesign";
 

@@ -4,7 +4,7 @@ import "./Wishlist.css"
 import {CartContext} from "../../hooks/CartContext";
 import {ShoppingCart, Trash2} from "lucide-react";
 
-function Wishlist() {
+export function Wishlist() {
   const { addToCart } = useContext(CartContext);
 
   const { wishlist, removeWish} =
@@ -78,4 +78,3 @@ function Wishlist() {
   );
 }
 
-export default Wishlist;

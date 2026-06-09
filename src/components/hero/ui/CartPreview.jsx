@@ -56,8 +56,7 @@
 // }
 
 
-
-import { Trash2 } from "lucide-react";
+import {Trash2} from "lucide-react";
 
 const cartItems = [
   { id: 1, emoji: "🍅", name: "Derica Tomato", quantity: "1 kg", price: "₦7.00" },

@@ -1,7 +1,7 @@
 import Hero from "../components/Hero/Hero";
 
 
-function Shop() {
+export function Shop() {
   return (
     <div>
       <Hero />
@@ -9,4 +9,4 @@ function Shop() {
   );
 }
 
-export default Shop;
+

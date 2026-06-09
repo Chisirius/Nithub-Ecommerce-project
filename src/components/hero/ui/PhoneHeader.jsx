@@ -15,9 +15,7 @@
 // }
 
 
-            
-
-import { Bell, ShoppingCart } from "lucide-react";
+import {Bell, ShoppingCart} from "lucide-react";
 
 export function PhoneHeader() {
   return (

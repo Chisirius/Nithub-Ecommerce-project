@@ -2,7 +2,7 @@ import {createContext, useState} from "react";
 
 export const SearchContext =createContext();
 
-export  function SearchProvider({children}){
+export function SearchProvider({children}){
     const [searchQuery, setSearchQuery] = useState(" ");
 
    return(
@@ -11,4 +11,4 @@ export  function SearchProvider({children}){
     </SearchContext.Provider>
    )
     
-};
+}

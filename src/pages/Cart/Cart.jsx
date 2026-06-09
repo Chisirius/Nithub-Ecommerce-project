@@ -4,7 +4,7 @@ import {useContext} from 'react'
 import {CartContext} from '../../hooks/CartContext'
 import {Trash2} from 'lucide-react'
 
-function Cart() {
+export function Cart() {
   const {
     cart,
     removeFromCart,
@@ -109,7 +109,7 @@ function Cart() {
 
             <button 
             className="action-btn del"
-            nClick={() => removeFromCart(item.id)}>
+            onClick={() => removeFromCart(item.id)}>
                         <Trash2 />
                       </button>
 
@@ -132,42 +132,8 @@ function Cart() {
   )
 }
 
-export default Cart
 
 
 
 
-{/* <div className="wish-container">
-        
-{
-  wishList.length >0 &&
-  ( 
-    <div className='mt-[50px]'>
-    <h1 className='text-[28px]'>Wish List</h1>
-   { wishList.map(item=>
-      <div key={item.id} className="cart-items">
-        <div className="cart-item">
-        
-        <img
-          src={item.image}
-          alt="agric product"
-          className="cart-img"
-        />  
 
-        <div className="item-details">
-          <h3>{item.name}</h3>
-          <p>#{item.new_price}</p>
-        </div>
-
-        <button className="remove-btn" onClick ={()=> addToCart(item)}>Add to cart</button>
-        <button className="remove-btn" onClick={(e) => toggleWishlist(item, e)
-        }>Remove</button>
-
-        </div>
-      </div>)}
-    </div>
-
-     
-  )
-}
-</div> */}

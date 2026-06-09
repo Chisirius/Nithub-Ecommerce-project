@@ -1,7 +1,7 @@
 import React from "react";
 import categories from "../../features/products/data/allCategories";
 
-function FilterBar({ setCategory, setSortOrder }) {
+export function FilterBar({ setCategory, setSortOrder }) {
   return (
     <div>
       {/* Category Filter */}
@@ -25,4 +25,3 @@ function FilterBar({ setCategory, setSortOrder }) {
   );
 }
 
-export default FilterBar;
