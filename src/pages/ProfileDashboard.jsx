@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import ProfileLayout from '../components/profile/layout/profileLayout';
+import ProfileLayout from '../components/profile/layout/ProfileLayout';
 import OrdersPage from '../pages/orders/OrderPage';
 import VouchersPage from '../components/profile/vouchers/vouchers';
-import WishlistPage from '../components/profile/wishlist/wishlist';
-import ReviewsPage from '../components/profile/reviews/reviewPage';
+import WishlistPage from '../components/profile/wishlist/Wishlist';
+import ReviewsPage from '../components/profile/reviews/ReviewPage';
 import AddressBookPage from '../pages/AddressBook/AddressBook';
-import AccountManagementPage from '../components/profile/settings/accountManager';
+import AccountManagementPage from '../components/profile/settings/AccountManager';
 import AccountOverview from '../components/profile/account/accountOverview';
 
 // Simple placeholder pages
