@@ -1,6 +1,6 @@
 import React from 'react';
 import {Bell, CreditCard, Edit2, MapPin, User} from 'lucide-react';
-import './AccountOverview.css';
+import './accountOverview.css';
 import {NavLink, useNavigate} from 'react-router-dom';
 import {useAuth} from '../../../hooks/AuthContext';
 import {useAddress} from '../../../hooks/AddressContext';
