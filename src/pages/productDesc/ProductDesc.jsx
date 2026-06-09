@@ -38,7 +38,7 @@ export function ProductDesc() {
     <div className="product-preview-container">
     <div className="product-image-section">
       <img
-        src={product.imageUrl}
+        src={product.images?.[0]}
         alt={product.name}
         className="product-main-image"
       />
@@ -72,8 +72,8 @@ export function ProductDesc() {
       />
 
       <div className="seller-details">
-        <p><strong>Seller: John Doe</strong></p>
-        <p>Contact: johndoe@example.com</p>
+        <p><strong>Seller: {product.seller?.name} </strong></p>
+        <p>Contact: {product.seller.email}</p>
       </div>
       <i className="fas fa-heart favorite-icon" title="Add to Favourite"></i>
     </div>
