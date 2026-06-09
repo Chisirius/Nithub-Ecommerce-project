@@ -15,7 +15,7 @@ import {
     X,
 } from 'lucide-react';
 
-import AddAddressForm from '../../components/profile/settings/AddAddress';
+import AddAddressForm from '../../components//profile/settings/AddAddress';
 
 
 import {initializePayment, verifyPayment,} from "../../services/paymentServices";

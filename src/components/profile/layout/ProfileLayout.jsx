@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProfileLayout.css';
-import ProfileSidebar from './profileSidebar';
+import ProfileSidebar from './ProfileSidebar';
 
 
 function ProfileLayout({ children, activePage, onPageChange }) {

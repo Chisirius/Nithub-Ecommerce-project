@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ArrowLeft, Bell, Save} from 'lucide-react';
-import './Newsletter.css';
+import './NewsLetter.css';
 
 
 function NewsletterPreferencesPage({ onBack }) {

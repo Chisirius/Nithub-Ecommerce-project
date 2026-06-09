@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Image as ImageIcon, Save, Upload, X} from 'lucide-react';
-//import { SellerProduct } from '../data/mockData';
 import './EditProduct.css';
 import {categories} from './productCategory';
 import {uploadImage} from '../../../services/uploadService';
