@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ProfileLayout from '../components/profile/layout/ProfileLayout';
 import OrdersPage from '../pages/orders/OrderPage';
-import VouchersPage from '../components/profile/vouchers/vouchers';
+import VouchersPage from '../components/profile/vouchers/Vouchers';
 import WishlistPage from '../components/profile/wishlist/Wishlist';
 import ReviewsPage from '../components/profile/reviews/ReviewPage';
 import AddressBookPage from '../pages/AddressBook/AddressBook';
