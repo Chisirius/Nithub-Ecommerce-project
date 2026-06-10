@@ -32,7 +32,6 @@ export function Explore() {
     const fetchProducts = async () => {
       try {
         const data = await getAllProducts();
-       
 
         setProducts(data);
       } catch (error) {
@@ -51,7 +50,12 @@ export function Explore() {
   // FILTER + SORT PRODUCTS
   // -------------------------
   const sortedData = useMemo(() => {
-    let filteredProduct = products;
+    if (!products || products.length === 0) {
+      return [];
+    }
+    
+    let filteredProduct = [...products];
+    
 
     if (activeCategory !== "all") {
       filteredProduct = filteredProduct.filter(
@@ -200,4 +204,9 @@ export function Explore() {
     </div>
   );
 }
+
+
+
+
+
 
