@@ -3,6 +3,8 @@ import {Heart, Mail, ShoppingBag, Sparkles, User} from 'lucide-react';
 import './ProfileSidebar.css';
 import {becomeSeller} from "../../../services/userServices";
 import {useNavigate} from "react-router-dom";
+import {toast} from "react-toastify"
+import { useState } from 'react';
 
 
 const menuItems = [
@@ -20,8 +22,11 @@ const menuItems = [
 function ProfileSidebar({ activePage, onPageChange }) {
 
   const navigate = useNavigate();
-  const handleBecomeSeller = async () => {
+  const [loading, setLoading] = useState(false);
 
+  const handleBecomeSeller = async (e) => {
+    e.preventDefault()
+    setLoading(true)
     try {
   
       await becomeSeller();
@@ -31,7 +36,9 @@ function ProfileSidebar({ activePage, onPageChange }) {
   
       console.log(error);
   
-      alert("Failed to become seller");
+      toast.error("Failed to become seller");
+    }finally{
+      setLoading(false)
     }
   };
 
@@ -71,7 +78,8 @@ function ProfileSidebar({ activePage, onPageChange }) {
             Start selling your agricultural products on MyAgro
           </p>
           
-          <button className="cta-button" onClick={handleBecomeSeller}>Get Started</button>
+          <button className="cta-button" onClick={handleBecomeSeller} disabled={loading}>
+          {loading ? "Processing..." : "Start Selling"}</button>
           
         </div>
       </nav>

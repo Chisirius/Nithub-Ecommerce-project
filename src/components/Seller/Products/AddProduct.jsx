@@ -4,6 +4,7 @@ import './AddProduct.css';
 import {categories} from './productCategory';
 import api from '../../../services/api';
 import {createProduct} from '../../../services/productService';
+import {toast} from "react-toastify"
 
 function AddProduct() {
   const [formData, setFormData] = useState({
@@ -92,6 +93,7 @@ function AddProduct() {
       });
   
       setSuccess("Product created successfully!");
+      toast.success("Product created successfully!")
   
       // reset
       setFormData({
@@ -110,7 +112,7 @@ function AddProduct() {
       setImageFiles([]);
   
     } catch (error) {
-      console.error(error);
+      toast.error(error);
       setError(error.response?.data?.message || "Failed to create product");
       console.error("Server Error Details:", error.response?.data);
     } finally {
@@ -358,9 +360,9 @@ function AddProduct() {
           <button type="button" className="btn btn-secondary" disabled>
             Save as Draft
           </button>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" disabled={loading}>
             <Save size={18} />
-            <span>Publish Product</span>
+            <span>{loading ? "Publishing..." : "publish Product"}</span>
           </button>
         </div>
       </form>

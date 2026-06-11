@@ -12,10 +12,12 @@ export function LoginSignup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
 
        const handleSubmit = async(e) =>{
         e.preventDefault()
+        setLoading(true);
         try {await register({
           name,
           email,
@@ -26,6 +28,8 @@ export function LoginSignup() {
         } catch(error){
           console.log(error);
           alert("Login failed");
+        }finally {
+          setLoading(false);
         }
        }
 
@@ -84,7 +88,8 @@ export function LoginSignup() {
           </div>
           <button 
           className='submit'
-          type="submit" >Sign Up</button>
+          type="submit"
+          disabled={loading} >{loading ? "Signing up..." : "Sign Up"}</button>
         </form>
 
         <div className="login-here">

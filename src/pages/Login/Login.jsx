@@ -9,12 +9,13 @@ export function Login() {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [loading, setLoading]= useState (false)
 
   
 
   const handleSubmit = async(e) => {
     e.preventDefault()
-
+    setLoading(true)
     try {await login({email, password})
 
   alert("You're logged in")
@@ -23,6 +24,8 @@ export function Login() {
   }catch(error){
       console.log(error)
       alert("login failed")
+    }finally{
+      setLoading(false)
     }
     
     
@@ -54,7 +57,8 @@ export function Login() {
             onChange = {(e)=> setPassword(e.target.value)}
             required />
           </div>
-          <button type="submit" className="submit-btn">Log In</button>
+          <button type="submit" className="submit-btn" disabled={loading}>
+            {loading ? "Login user..." : "Log In"}</button>
         </form>
         <div className="login-link">
           Don't have an account yet? <NavLink to='/signup'>
