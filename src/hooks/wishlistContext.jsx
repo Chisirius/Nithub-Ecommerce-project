@@ -2,21 +2,17 @@ import {createContext, useContext, useEffect, useState,} from "react";
 
 import {addToWishlist, getWishlist, removeFromWishlist,} from "../services/wishlistServices"
 
+import {toast} from "react-toastify"
+
 export const WishlistContext = createContext();
  export const useWishlist = () => useContext(WishlistContext);
   
   export const WishlistProvider = ({ children }) => {
     const [wishlist, setWishlist] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [toast, setToast] = useState("");
+    
 
-    // -------------------------
-  // TOAST
-  // -------------------------
-  const notify = (message) => {
-    setToast(message);
-    setTimeout(() => setToast(""), 2000);
-  };
+    
   
     // -------------------------
     // FETCH WISHLIST
@@ -46,8 +42,7 @@ export const WishlistContext = createContext();
         await addToWishlist(product.id);
   
         await fetchWishlist();
-        alert("wishlist added")
-        notify("wishlist added");
+      toast.success("wishlist added");
       } catch (err) {
         console.log(err);
       }
@@ -60,7 +55,7 @@ export const WishlistContext = createContext();
       try {
         await removeFromWishlist(itemId);
         await fetchWishlist();
-        notify("wishlist removed");
+        toast.error("wishlist removed");
       } catch (err) {
         console.log(err);
       }
@@ -94,7 +89,6 @@ export const WishlistContext = createContext();
           toggleWishlist,
           loading,
           wishlistIds,
-          notify,
           removeWish
         }}
       >

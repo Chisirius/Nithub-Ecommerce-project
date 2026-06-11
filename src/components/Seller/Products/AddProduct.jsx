@@ -355,7 +355,7 @@ function AddProduct() {
 
         {/* Form Actions */}
         <div className="form-actions">
-          <button type="button" className="btn btn-secondary">
+          <button type="button" className="btn btn-secondary" disabled>
             Save as Draft
           </button>
           <button type="submit" className="btn btn-primary">

@@ -322,3 +322,6 @@
     display: none;
   }
 }
+.inactive{
+  color: rgb(184, 179, 179)
+}

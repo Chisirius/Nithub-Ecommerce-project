@@ -5,6 +5,8 @@ import {CartContext} from '../../hooks/CartContext'
 import {Heart, ShoppingCart} from 'lucide-react';
 import {useWishlist} from '../../hooks/useWishlist'
 import {useAuth} from '../../hooks/AuthContext'
+import {toast} from "react-toastify"
+
 
 function AllProduct({
   p_name,
@@ -34,7 +36,7 @@ function AllProduct({
     e.stopPropagation()
 
     if (!user) {
-      alert("Please login to add items to cart")
+      toast.error("Please login to add items to cart")
       navigate("/login")
       return
     }
@@ -49,7 +51,7 @@ function AllProduct({
     e.stopPropagation()
 
     if (!user) {
-      alert("Please login to use wishlist")
+      toast.error("Please login to use wishlist")
       navigate("/login")
       return
     }

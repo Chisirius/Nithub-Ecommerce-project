@@ -105,16 +105,6 @@ function AddAddressForm({ onClose, onSave }) {
             
           />
 
-          <label className="checkbox">
-            <input
-              type="checkbox"
-              name="isDefault"
-              checked={formData.isDefault}
-              onChange={handleChange}
-            />
-            Set as default address
-          </label>
-
           <div className="actions">
             <button type="button" onClick={onClose} className="cancel">
               Cancel

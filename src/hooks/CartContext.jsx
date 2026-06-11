@@ -1,19 +1,14 @@
 import {createContext, useEffect, useState} from "react";
 import {addToCartAPI, getCart, removeFromCartAPI, updateCartQtyAPI,} from "../services/cartServices";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [toast, setToast] = useState("");
+  
 
-  // -------------------------
-  // TOAST
-  // -------------------------
-  const notify = (message) => {
-    setToast(message);
-    setTimeout(() => setToast(""), 2000);
-  };
+  
 
   // -------------------------
   // LOAD CART FROM BACKEND
@@ -42,13 +37,12 @@ export const CartProvider = ({ children }) => {
      
       await addToCartAPI(product.id, 1);
       await fetchCart();
-      notify("Added to cart 🛒");
-      alert("Added to cart 🛒")
+      toast.success("Added to cart 🛒");
+      
 
     } catch (err) {
       console.log(err);
-      notify("Failed to add to cart");
-      alert("Failed to add to cart");
+      toast.error("Failed to add to cart");
     }
   };
 
@@ -60,7 +54,7 @@ export const CartProvider = ({ children }) => {
 
       await removeFromCartAPI(itemId);
       await fetchCart();
-      notify("Removed from cart");
+      toast.success("Removed from cart");
 
     } catch (err) {
       console.log(err);
@@ -108,8 +102,6 @@ export const CartProvider = ({ children }) => {
         removeFromCart,
         updateQuantity,
         subTotal,
-        notify,
-        toast,
         cartIds,
         clearCart,
         getItemSubtotal

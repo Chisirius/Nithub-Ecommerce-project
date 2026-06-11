@@ -17,6 +17,17 @@ export function AppHeader() {
   const [showDropdown, setShowDropdown] = useState(false);
   // const [notifications, setNotification] = useState(3);
   // const [messages, setMessages] = useState(5);
+  const [timeoutId, setTimeoutId] = useState(null);
+
+const handleEnter = () => {
+  if (timeoutId) clearTimeout(timeoutId);
+  setShowDropdown(true);
+};
+
+const handleLeave = () => {
+  const id = setTimeout(() => setShowDropdown(false), 150);
+  setTimeoutId(id);
+};
   
 
   const navigate = useNavigate();
@@ -128,38 +139,44 @@ export function AppHeader() {
               {wishlist.length > 0 && <span className="cart-badge">{wishlist.length}</span>}
             </NavLink>
 
-            <div className="user-avatar-dropdown">
-              <button
-                className="avatar-trigger"
-                onClick={() => setShowDropdown(!showDropdown)}
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1740252117044-2af197eea287?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="User"
-                  className="avatar-image"
-                />
-                <ChevronDown size={16} />
-              </button>
+            <div
+  className="user-avatar-dropdown"
+  onMouseEnter={handleEnter}
+  onMouseLeave={handleLeave}
+>
+  <button className="avatar-trigger">
+    <img
+      src="https://images.unsplash.com/photo-1740252117044-2af197eea287?q=80&w=1160&auto=format&fit=crop"
+      alt="User"
+      className="avatar-image"
+    />
+    <ChevronDown size={16} />
+  </button>
 
-              {showDropdown && (
-                <div className="avatar-dropdown-menu">
-                  <div className="dropdown-header">
-                    <p className="dropdown-name">Welcome Back!</p>
-                    <p className="dropdown-email">{user.email}</p>
-                  </div>
-                  <div className="dropdown-divider"></div>
-                  <NavLink to="/profile" className="dropdown-item">
-                    Profile
-                  </NavLink>
-                  <button className="dropdown-item">Settings</button>
-                  <button className="dropdown-item">Help Center</button>
-                  <div className="dropdown-divider"></div>
-                  <button className="dropdown-item logout" onClick={handleLogout}>
-                    Logout
-                  </button>
-                </div>
-              )}
-            </div>
+  {showDropdown && (
+    <div className="avatar-dropdown-menu">
+      <div className="dropdown-header">
+        <p className="dropdown-name">Welcome Back!</p>
+        <p className="dropdown-email">{user.email}</p>
+      </div>
+
+      <div className="dropdown-divider"></div>
+
+      <NavLink to="/profile" className="dropdown-item">
+        Profile
+      </NavLink>
+
+      <button className="dropdown-item inactive">Settings</button>
+      <button className="dropdown-item inactive">Help Center</button>
+
+      <div className="dropdown-divider"></div>
+
+      <button className="dropdown-item logout" onClick={handleLogout}>
+        Logout
+      </button>
+    </div>
+  )}
+</div>
           </>
         )}
       </div>

@@ -22,6 +22,7 @@ import Footer from "../components/FooterHelp./FooterHelp";
 import { CartContext } from "../hooks/CartContext";
 import { NavBar } from "../components/Navbar/NavBar";
 import { AppHeader } from "../components/AppHeader/AppHeader";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -88,7 +89,7 @@ function App() {
         </Routes>
         <Footer />
         </SearchProvider>
-      
+      <ToastContainer />
     </>
   );
 }
