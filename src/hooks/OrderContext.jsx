@@ -1,6 +1,8 @@
 import {createContext, useEffect, useState,} from "react";
 
 import {getOrdersAPI,} from "../services/orderService";
+import { useAuth } from "./AuthContext";
+
 
 
 export const OrderContext =
@@ -9,15 +11,22 @@ export const OrderContext =
   export const OrderProvider = ({
     children,
   }) => {
+    const { token } = useAuth();
   
-    const [orders, setOrders] =
-      useState([]);
+    const [orders, setOrders] = useState([]);
   
     const fetchOrders =
       async () => {
         try {
-          const data =
-            await getOrdersAPI();
+
+          const token = localStorage.getItem("token");
+
+      if (!token) {
+        console.log("No token yet, skipping fetchOrders");
+        return;
+      }
+
+          const data = await getOrdersAPI();
   
           setOrders(data);
   
@@ -27,8 +36,11 @@ export const OrderContext =
       };
   
     useEffect(() => {
-      fetchOrders();
-    }, []);
+      const token = localStorage.getItem("token");
+      if (token) {
+        fetchOrders();
+      }
+    }, [token]);
   
     return (
       <OrderContext.Provider
